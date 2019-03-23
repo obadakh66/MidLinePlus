@@ -10,7 +10,7 @@
                    <form runat="server">
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">البريد الالكتروني</label>
-                              <input type="email" name="email"  class="form-control float-right" id="email" aria-describedby="emailHelp" placeholder="ادخل البريد الالكتروني ">
+                              <asp:Button type="email" name="email"  class="form-control float-right" id="email" aria-describedby="emailHelp" placeholder="ادخل البريد الالكتروني ">
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رمز الدخول</label>
