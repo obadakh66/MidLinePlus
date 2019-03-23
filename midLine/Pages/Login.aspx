@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="midLine.Pages.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    	<div class="align-content-center">
-				<div class="float-right">
+    	<div class="align-self-lg-center">
+				<div dir="rtl">
 					 <div class="logo mb-3">
 						 <div class="col-md-12 text-center">
 							<h1>تسجيل الدخول</h1>
@@ -9,8 +9,8 @@
 					</div>
                    <form runat="server">
                            <div class="form-group">
-                              <label for="exampleInputEmail1">البريد الالكتروني</label>
-                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <label class="float-right"> البريد الالكتروني </label>
+                              <input type="email" name="username" class="form-control"  placeholder="Enter email">
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1">Password</label>
@@ -23,7 +23,7 @@
                               <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
                            </div>
                            <div class="col-md-12 ">
-                              <div class="login-or">
+                              <div>
                                  <hr class="hr-or">
                                  <span class="span-or">or</span>
                               </div>
