@@ -10,17 +10,18 @@
                    <form runat="server">
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">البريد الالكتروني</label>
-                              <asp:Button type="email" name="email"  class="form-control float-right" id="email" aria-describedby="emailHelp" placeholder="ادخل البريد الالكتروني ">
+                              <Asp:TextBox runat="server" ID="username" class="form-control float-right"  aria-describedby="emailHelp" placeholder="ادخل البريد الالكتروني "/>
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رمز الدخول</label>
-                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز">
+                              <Asp:TextBox type="password" runat="server" ID="pass"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز"/>
                            </div>
                            <div class="form-group">
                               <p class="text-center"> <a href="#"></a></p>
                            </div>
                            <div class="col-md-12 text-center ">
-                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">تسجيل الدخول</button>
+                           
+                               <asp:Button ID="Login" runat="server" Text="تسجيل الدخول" class=" btn btn-block mybtn btn-primary tx-tfm" OnClick="Login_Click" />
                            </div>
                            <div class="col-md-12 ">
                               <div class="login-or">
@@ -36,7 +37,7 @@
                               </p>
                            </div>
                            <div class="form-group">
-                              <p class="text-center">لا يوجد لديك حساب؟  <a href="#" id="signup">تسجيل </a></p>
+                              <p class="text-center">لا يوجد لديك حساب؟  href="#" id="signup">تسجيل </a></p>
                            </div>
                         </form>
                  

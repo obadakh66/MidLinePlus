@@ -10,50 +10,67 @@
                    <form runat="server">
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">اسم المستخدم</label>
-                              <input type="email" name="email"  class="form-control float-right" id="email" aria-describedby="emailHelp" placeholder="ادخل الاسم">
+                              <Asp:TextBox runat="server" ID="Username"  class="form-control float-right" aria-describedby="emailHelp" placeholder="ادخل اسم المستخدم"/>
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">الاسم الكامل</label>
-                              <input type="password" name="password" id="fullname"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم من ثلاثه مقاطع">
+                              <Asp:TextBox runat="server" ID="FullName"   class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم من ثلاثه مقاطع"/>
                            </div>
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رقم الهاتف</label>
-                              <input type="password" name="password" id="number"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل رقم الهاتف">
+                              <Asp:TextBox runat="server" ID="MobileNumber"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل رقم الهاتف"/>
                            </div>
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رمز السري</label>
-                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري">
+                              <Asp:TextBox runat="server" ID="Password" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
                            </div>
-                       <label class="float-right" > اختر المدينه</label>
-                               <select>
-                                   <option value="اربد">اربد</option>
-                                   <option value="عجلون">عجلون</option>
-                                      <option value="البلقاء">البلقاء</option>
-                                     <option value="معان" >معان</option>
-                                   <option value="الطفيله" >الطفيله</option>
-                                   <option value="العقبه" >العقبه</option>
-                                   <option value="الكرك" >الكرك</option>
-                                   <option value="الزرقاء" >الزرقاء</option>
-                                   <option value="المفرق" >المفرق</option>
-                                   <option value="مادبا" >مادبا</option>
-                                   <option value="جرش" >جرش</option>
-                                   <option value="عمان" selected >عمان</option>
-
-
-                               </select>
-                       <p>
-                       <label class="float-right">اختر الجنس</label>
-                       <select>
-                           <option value="ذكر" selected >ذكر</option>
-                           <option value="انثى">انثى</option>
-                           </p>
-
-                       </select>
+                         <div class="form-group">
+                              <label for="exampleInputEmail1" class="float-right">اعد كتابة</label>
+                              <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
+                           </div>
+                        <div class="form-group">
+                        <label class="float-right" > اختر المدينه</label>
+                       <asp:DropDownList ID="City" runat="server"  class="form-control float-right">
+                           <asp:ListItem>اربد</asp:ListItem>
+                           <asp:ListItem>عمان</asp:ListItem>
+                           <asp:ListItem>الزرقاء</asp:ListItem>
+                           <asp:ListItem>المفرق</asp:ListItem>
+                           <asp:ListItem>جرش</asp:ListItem>
+                           <asp:ListItem>عجلون</asp:ListItem>
+                           <asp:ListItem>السلط</asp:ListItem>
+                           <asp:ListItem>مادبا</asp:ListItem>
+                           <asp:ListItem>الكرك</asp:ListItem>
+                           <asp:ListItem>الطفيلة</asp:ListItem>
+                           <asp:ListItem>معان</asp:ListItem>
+                           <asp:ListItem>العقبة</asp:ListItem>
+                           </asp:DropDownList>
+                      </div>
+                          <div class="form-group">
+                        <label class="float-right" > اختر الجنس</label>
+                       <asp:DropDownList ID="Gender" runat="server"  class="form-control float-right">
+                           <asp:ListItem>ذكر</asp:ListItem>
+                           <asp:ListItem>انثى</asp:ListItem>
+                         
+                           </asp:DropDownList>
+                      </div>
+                         <div class="form-group">
+                        <label class="float-right" >  تسجيل كـ</label>
+                       <asp:DropDownList ID="UserType" runat="server"  class="form-control float-right">
+                           <asp:ListItem Value="1">دكتور</asp:ListItem>
+                           <asp:ListItem Value="2">ممرض</asp:ListItem>
+                         
+                           <asp:ListItem Value="3">مريض</asp:ListItem>
+                         
+                           </asp:DropDownList>
+                      </div>
+                       
+                             
+                     
                            <div class="form-group">
                               <p class="text-center"> <a href="#"></a></p>
                            </div>
                            <div class="col-md-12 text-center ">
-                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">تسجيل</button>
+                              <Asp:Button runat="server" ID="Register_btn" type="submit" class=" btn btn-block mybtn btn-primary tx-tfm" Text="تسجيل" OnClick="Register_btn_Click"/>
                            </div>
                            <div class="col-md-12 ">
                               <div class="login-or">

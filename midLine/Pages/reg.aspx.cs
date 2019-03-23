@@ -13,5 +13,23 @@ namespace midLine.Pages
         {
 
         }
+
+        protected void Register_btn_Click(object sender, EventArgs e)
+        {
+            User newUser = new User
+            {
+                Username = Username.Text,
+                FullName = FullName.Text,
+                Password = Password.Text,
+                MobileNumber = MobileNumber.Text,
+                City = City.SelectedItem.ToString(),
+                Gender = Gender.SelectedItem.ToString(),
+
+            };
+
+            midLineDBEntities1 db = new midLineDBEntities1();
+            db.Users.Add(newUser);
+            db.SaveChanges();
+        }
     }
 }

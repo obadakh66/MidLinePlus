@@ -14,7 +14,7 @@
         
     </style>
 </head>
-<body >
+<body dir="rtl">
     
        
      <nav class="navbar navbar-expand-sm bg-primary navbar-dark w-100">
@@ -37,7 +37,7 @@
     </li>
   </ul>
 </nav>
-        <div class="container body-content align-content-center">
+        <div class="body-content align-content-center">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
           

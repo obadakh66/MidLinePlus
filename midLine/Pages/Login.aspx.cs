@@ -13,5 +13,31 @@ namespace midLine.Pages
         {
 
         }
+
+        protected void Login_Click(object sender, EventArgs e)
+        {
+            var myUser = new User
+            {
+                Username = username.Text,
+
+                Password = pass.Text
+            };
+
+
+            Functions.Functions login_fun = new Functions.Functions();
+            if (login_fun.login(myUser) == 0)
+            {
+               // alert.Attributes.Remove("hidden");
+            }
+            else if (login_fun.login(myUser) == 1)
+            {
+                Response.Redirect("homePage.aspx");
+            }
+            else
+            {
+                Response.Redirect("adminPage.aspx");
+            }
+
+        }
     }
 }

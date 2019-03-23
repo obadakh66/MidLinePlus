@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c6a646df5f634d4fb9f4fc24bd7cfd6b" Name="Diagram1">
+        <EntityTypeShape EntityType="midLineDBModel.AppointmentRequest" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Comment" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Post" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Rating" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Report" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.User" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="midLineDBModel.FK_AppointmentRequest_DR_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="midLineDBModel.FK_AppointmentRequest_PatientID" ManuallyRouted="false" />
+        <AssociationConnector Association="midLineDBModel.FK_Comment_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="midLineDBModel.FK_Comment_User" ManuallyRouted="false" />
+        <AssociationConnector Association="midLineDBModel.FK_Table_1_TUserID" ManuallyRouted="false" />
+        <AssociationConnector Association="midLineDBModel.FK_Rating_Rated" ManuallyRouted="false" />
+        <AssociationConnector Association="midLineDBModel.FK_Rating_RatedFor" ManuallyRouted="false" />
+        <AssociationConnector Association="midLineDBModel.FK_Report_ReportedID" ManuallyRouted="false" />
+        <AssociationConnector Association="midLineDBModel.FK_Report_UserID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
