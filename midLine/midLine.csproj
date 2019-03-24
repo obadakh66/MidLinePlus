@@ -158,17 +158,23 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="MidLineDB.Context.tt">
+    <Content Include="mefLineDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MidLineDB.edmx</DependentUpon>
-      <LastGenOutput>MidLineDB.Context.cs</LastGenOutput>
+      <DependentUpon>mefLineDB.edmx</DependentUpon>
+      <LastGenOutput>mefLineDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="MidLineDB.tt">
+    <Content Include="mefLineDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MidLineDB.edmx</DependentUpon>
-      <LastGenOutput>MidLineDB.cs</LastGenOutput>
+      <DependentUpon>mefLineDB.edmx</DependentUpon>
+      <LastGenOutput>mefLineDB.cs</LastGenOutput>
     </Content>
+    <Content Include="Pages\Dent Section.aspx" />
+    <Content Include="Pages\heart section.aspx" />
     <Content Include="Pages\homePage.aspx" />
+    <Content Include="Pages\Pediatrics section.aspx" />
+    <Content Include="Pages\nursing section.aspx" />
+    <Content Include="Pages\Orthopedic section.aspx" />
+    <Content Include="Pages\other section.aspx" />
     <Content Include="Pages\reg.aspx" />
     <Content Include="Pages\drAppointments.aspx" />
     <Content Include="Pages\DrsHome.aspx" />
@@ -194,12 +200,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <EntityDeploy Include="MidLineDB.edmx">
+    <EntityDeploy Include="mefLineDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MidLineDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>mefLineDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="MidLineDB.edmx.diagram">
-      <DependentUpon>MidLineDB.edmx</DependentUpon>
+    <Content Include="mefLineDB.edmx.diagram">
+      <DependentUpon>mefLineDB.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Pages\Login.aspx" />
@@ -254,7 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppointmentRequest.cs">
-      <DependentUpon>MidLineDB.tt</DependentUpon>
+      <DependentUpon>mefLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -266,7 +272,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Comment.cs">
-      <DependentUpon>MidLineDB.tt</DependentUpon>
+      <DependentUpon>mefLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -281,20 +287,34 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MidLineDB.Context.cs">
+    <Compile Include="mefLineDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MidLineDB.Context.tt</DependentUpon>
+      <DependentUpon>mefLineDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MidLineDB.cs">
+    <Compile Include="mefLineDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MidLineDB.tt</DependentUpon>
+      <DependentUpon>mefLineDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="MidLineDB.Designer.cs">
+    <Compile Include="mefLineDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MidLineDB.edmx</DependentUpon>
+      <DependentUpon>mefLineDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dent Section.aspx.cs">
+      <DependentUpon>Dent Section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Dent Section.aspx.designer.cs">
+      <DependentUpon>Dent Section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\heart section.aspx.cs">
+      <DependentUpon>heart section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\heart section.aspx.designer.cs">
+      <DependentUpon>heart section.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -309,6 +329,34 @@
     </Compile>
     <Compile Include="Pages\homePage.aspx.designer.cs">
       <DependentUpon>homePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pediatrics section.aspx.cs">
+      <DependentUpon>Pediatrics section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Pediatrics section.aspx.designer.cs">
+      <DependentUpon>Pediatrics section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\nursing section.aspx.cs">
+      <DependentUpon>nursing section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\nursing section.aspx.designer.cs">
+      <DependentUpon>nursing section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Orthopedic section.aspx.cs">
+      <DependentUpon>Orthopedic section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Orthopedic section.aspx.designer.cs">
+      <DependentUpon>Orthopedic section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\other section.aspx.cs">
+      <DependentUpon>other section.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\other section.aspx.designer.cs">
+      <DependentUpon>other section.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\reg.aspx.cs">
       <DependentUpon>reg.aspx</DependentUpon>
@@ -332,7 +380,7 @@
       <DependentUpon>DrsHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Post.cs">
-      <DependentUpon>MidLineDB.tt</DependentUpon>
+      <DependentUpon>mefLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\Site.Master.cs">
@@ -343,10 +391,10 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Rating.cs">
-      <DependentUpon>MidLineDB.tt</DependentUpon>
+      <DependentUpon>mefLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Report.cs">
-      <DependentUpon>MidLineDB.tt</DependentUpon>
+      <DependentUpon>mefLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -356,7 +404,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>MidLineDB.tt</DependentUpon>
+      <DependentUpon>mefLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

@@ -414,7 +414,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="midLineDBEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="midLineDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AppointmentRequests" EntityType="Self.AppointmentRequest" />
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="Posts" EntityType="Self.Post" />
@@ -463,7 +463,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="midLineDBModelStoreContainer" CdmEntityContainer="midLineDBEntities1">
+        <EntityContainerMapping StorageEntityContainer="midLineDBModelStoreContainer" CdmEntityContainer="midLineDBEntities">
           <EntitySetMapping Name="AppointmentRequests">
             <EntityTypeMapping TypeName="midLineDBModel.AppointmentRequest">
               <MappingFragment StoreEntitySet="AppointmentRequest">

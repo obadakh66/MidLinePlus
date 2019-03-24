@@ -13,10 +13,10 @@ namespace midLine
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class midLineDBEntities1 : DbContext
+    public partial class midLineDBEntities : DbContext
     {
-        public midLineDBEntities1()
-            : base("name=midLineDBEntities1")
+        public midLineDBEntities()
+            : base("name=midLineDBEntities")
         {
         }
     

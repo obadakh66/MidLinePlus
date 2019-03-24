@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="homePage.aspx.cs" Inherits="midLine.Pages.WebForm2" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="Dent Section.aspx.cs" Inherits="midLine.Pages.Dental_Section" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
  <br />
     <div class="mr-0" align="right">
@@ -21,10 +22,35 @@
             
           </div>
         </div><!--/.sidebar-offcanvas-->
+          
           <div class="col container">
+              <form runat="server">
+              <div class="form-group">
+                  <asp:DropDownList ID="DropDownList1" runat="server">
+                       <asp:ListItem>اربد</asp:ListItem>
+                           <asp:ListItem>عمان</asp:ListItem>
+                           <asp:ListItem>الزرقاء</asp:ListItem>
+                           <asp:ListItem>المفرق</asp:ListItem>
+                           <asp:ListItem>جرش</asp:ListItem>
+                           <asp:ListItem>عجلون</asp:ListItem>
+                           <asp:ListItem>البلقاء</asp:ListItem>
+                           <asp:ListItem>مادبا</asp:ListItem>
+                           <asp:ListItem>الكرك</asp:ListItem>
+                           <asp:ListItem>الطفيلة</asp:ListItem>
+                           <asp:ListItem>معان</asp:ListItem>
+                           <asp:ListItem>العقبة</asp:ListItem>
+                  </asp:DropDownList>
+
+                  <asp:Button ID="search" runat="server" Text="بحث" class=" btn btn-primary tx-tfm" />
+            
+
+              </div>
+                  </form>
+        
+
             
             
-          <div class="row container p-1">
+          <!--div class="row container p-1">
               <a href="Login.aspx" class="mr-5">
            <div class="card m-3" style="width: 18rem;">
              <img class="card-img-top" src="../1.png" alt="Card image cap">
@@ -60,7 +86,7 @@
              <img class="card-img-top" src="../1.png" alt="Card image cap">
              <div class="card-body">
 
-             <h5 class="card-title text-center">قسم الاطفال</h5>
+             <h5 class="card-title text-center">قسم الأذن والحنجرة</h5>
             
            </div>
         </div>
@@ -75,7 +101,7 @@
            </div>
         </div>
         </a>
-              
+              </a>
               <a href="Login.aspx"  >
            <div class="card m-3" style="width: 18rem;">
              <img class="card-img-top" src="../1.png" alt="Card image cap">
@@ -86,7 +112,7 @@
            </div>
         </div>
         </a>
-          </div><!--/row-->
+          </!--div><!--/row-->
      
         </div>
       </div>
