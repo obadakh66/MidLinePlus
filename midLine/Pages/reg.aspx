@@ -28,16 +28,16 @@
                               <label for="exampleInputEmail1" class="float-right">اعد كتابة</label>
                               <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
                            </div>
-                        <div class="form-group">
+                        <div class="form-group" aria-autocomplete="none" aria-dropeffect="none">
                         <label class="float-right" > اختر المدينه</label>
-                       <asp:DropDownList ID="City" runat="server"  class="form-control float-right">
+                       <asp:DropDownList ID="City" runat="server"  class="form-control ">
                            <asp:ListItem>اربد</asp:ListItem>
                            <asp:ListItem>عمان</asp:ListItem>
                            <asp:ListItem>الزرقاء</asp:ListItem>
                            <asp:ListItem>المفرق</asp:ListItem>
                            <asp:ListItem>جرش</asp:ListItem>
                            <asp:ListItem>عجلون</asp:ListItem>
-                           <asp:ListItem>السلط</asp:ListItem>
+                           <asp:ListItem>البلقاء</asp:ListItem>
                            <asp:ListItem>مادبا</asp:ListItem>
                            <asp:ListItem>الكرك</asp:ListItem>
                            <asp:ListItem>الطفيلة</asp:ListItem>
@@ -47,14 +47,15 @@
                       </div>
                           <div class="form-group">
                         <label class="float-right" > اختر الجنس</label>
-                       <asp:DropDownList ID="Gender" runat="server"  class="form-control float-right">
-                           <asp:ListItem>ذكر</asp:ListItem>
-                           <asp:ListItem>انثى</asp:ListItem>
+                       <asp:DropDownList ID="Gender" runat="server"  class="form-control">
+                           <asp:ListItem Value="انثى">انثى</asp:ListItem>
+                         
+                           <asp:ListItem Value="ذكر">ذكر</asp:ListItem>
                          
                            </asp:DropDownList>
                       </div>
                          <div class="form-group">
-                        <label class="float-right" >  تسجيل كـ</label>
+                        <label class="" >  تسجيل كـ</label>
                        <asp:DropDownList ID="UserType" runat="server"  class="form-control float-right">
                            <asp:ListItem Value="1">دكتور</asp:ListItem>
                            <asp:ListItem Value="2">ممرض</asp:ListItem>

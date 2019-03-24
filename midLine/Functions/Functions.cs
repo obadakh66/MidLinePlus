@@ -10,7 +10,7 @@ namespace midLine.Functions
         public int login(User user)
         {
 
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var myUser = db.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
             var user2 = from u in db.Users
                         where u.Username == user.Username

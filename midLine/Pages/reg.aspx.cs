@@ -11,6 +11,7 @@ namespace midLine.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
 
         }
 
@@ -27,9 +28,10 @@ namespace midLine.Pages
 
             };
 
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             db.Users.Add(newUser);
             db.SaveChanges();
         }
+
     }
 }
