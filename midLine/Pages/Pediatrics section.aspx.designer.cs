@@ -10,16 +10,16 @@
 namespace midLine.Pages {
     
     
-    public partial class Dental_Section {
+    public partial class nose_and_throat_section {
         
         /// <summary>
-        /// DropDownList1 control.
+        /// city control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList city;
         
         /// <summary>
         /// search control.
@@ -29,5 +29,14 @@ namespace midLine.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button search;
+        
+        /// <summary>
+        /// PediaDoctors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PediaDoctors;
     }
 }

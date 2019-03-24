@@ -22,6 +22,15 @@ namespace midLine.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl successAlert;
         
         /// <summary>
+        /// updateForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl updateForm;
+        
+        /// <summary>
         /// price control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace midLine.Pages {
         protected global::System.Web.UI.WebControls.TextBox price;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// Departments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList Departments;
         
         /// <summary>
         /// availableTime control.

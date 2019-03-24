@@ -21,7 +21,7 @@
                  تم اكمال معلوماتك بنجاح يمكنك الآن استقبال مواعيد !
              </div>
             
-          <div class="row container p-3 align-content-center">
+          <div class="row container p-3 align-content-center" runat="server" id="updateForm">
             
             <div class="col-4"></div>
               <div class="card p-3 align-content-center col" style="width: 30rem;">
@@ -34,7 +34,7 @@
              </div>
           <div class="form-group">
               <label for="exampleInputEmail1">يرجى اختيار القسم</label>
-             <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server">
+             <asp:DropDownList ID="Departments" CssClass="form-control" runat="server">
                  <asp:ListItem>قسم القلب</asp:ListItem>
                  <asp:ListItem>قسم العظام</asp:ListItem>
                   </asp:DropDownList>

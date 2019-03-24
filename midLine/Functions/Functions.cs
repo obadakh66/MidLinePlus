@@ -13,7 +13,7 @@ namespace midLine.Functions
         public int login(User user)
         {
             int usertype;
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var myUser = db.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
             var user2 = from u in db.Users
                         where u.Username == user.Username
@@ -30,8 +30,8 @@ namespace midLine.Functions
                 Session["full_name"] = full_name;
                 Session["userID"] = user3.Id;
                 Session["edit_user"] = user3;
-                if (user.UserType == 1) { usertype = 1; }
-                else if (user.UserType == 2) { usertype = 2; }
+                if (myUser.UserType == 1) { usertype = 1; }
+                else if (myUser.UserType == 2) { usertype = 2; }
                 else{ usertype=3; }
                 
                 return usertype;
@@ -54,15 +54,15 @@ namespace midLine.Functions
 
         }
 
-        public bool UpdateInfo(int id, TextBox price, TextBox department, TextBox availableTime)
+        public bool UpdateInfo(int id, TextBox price, string department, TextBox availableTime)
         {
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var user = db.Users.Where(x => x.Id==id).FirstOrDefault();
             if (user != null)
             {
 
                 user.Price = price.Text;
-                user.Department = department.Text;
+                user.Department = department;
                 user.AvailableTime = availableTime.Text;
 
                 db.SaveChanges();
@@ -81,7 +81,7 @@ namespace midLine.Functions
             Button rejectRequest;
 
            
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
            
             foreach (var request in db.AppointmentRequests)
             {
@@ -181,9 +181,10 @@ namespace midLine.Functions
                 }
             }
             }
+       
         protected void accept_btn_Click(object sender, EventArgs e,int requestId)
         {
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var request = db.AppointmentRequests.Where(x => x.ID == requestId).FirstOrDefault();
             request.isAccepted = true;
             db.SaveChanges();
@@ -191,10 +192,586 @@ namespace midLine.Functions
         }
         protected void reject_btn_Click(object sender, EventArgs e,int requestId)
         {
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var request = db.AppointmentRequests.Where(x => x.ID == requestId).FirstOrDefault();
             request.isAccepted = !true;
             db.SaveChanges();
+        }
+        public void RetriveHeartDoctors(HtmlGenericControl control)
+        {
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, h53, img_div1, hr, status;
+            Button request;
+
+
+            midLineDBEntities db = new midLineDBEntities();
+
+            foreach (var doctor in db.Users)
+            {
+                if (doctor.Department == "قسم القلب")
+                {
+                    /* div1 code */
+                    div1 = new HtmlGenericControl("div");
+                    div1.Attributes["class"] = "card m-2";
+                    div1.Style.Add(HtmlTextWriterStyle.Padding, "2ex");
+                    div1.Style.Add(HtmlTextWriterStyle.Width, "20rem");
+                    /*---------------------------------*/
+                    /* div2 code */
+                    div2 = new HtmlGenericControl("div");
+                    div2.Attributes["class"] = "card-body row";
+                    /*---------------------------------*/
+                    /* div3 code */
+                    div3 = new HtmlGenericControl("div");
+                    div3.Attributes["class"] = "row";
+
+                    /* div4 code */
+                    div4 = new HtmlGenericControl("div");
+                    div4.Attributes["class"] = "row";
+                    /*---------------------------------*/
+                    /* img code */
+                    img_div1 = new HtmlGenericControl("img");
+                    img_div1.Attributes["class"] = "rounded-circle ml-2";
+                    img_div1.Attributes["src"] = "../1.png";
+                    img_div1.Attributes["width"] = "40";
+                    img_div1.Attributes["height"] = "40";
+                    /*---------------------------------*/
+                    /* h5 code */
+                    h5 = new HtmlGenericControl("h5");
+                    h5.Attributes["class"] = "card-title";
+                    h5.InnerText = doctor.FullName;
+                    /*---------------------------------*/
+                    /* h52 code */
+                    h52 = new HtmlGenericControl("p");
+                    h52.Attributes["class"] = "card-text";
+                    h52.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h52.InnerText = doctor.AvailableTime;
+                    /*---------------------------------*/
+                    /* h53 code */
+                    h53 = new HtmlGenericControl("p");
+                    h53.Attributes["class"] = "card-text";
+                    h53.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h53.InnerText = doctor.City;
+                    /*---------------------------------*/
+                    /* status code */
+                    status = new HtmlGenericControl("p");
+                    status.Attributes["class"] = "card-text gray";
+                    status.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
+                    status.Style.Add(HtmlTextWriterStyle.Color, "gray");
+
+                    /*---------------------------------*/
+                    /* hr code */
+                    hr = new HtmlGenericControl(HtmlTextWriterTag.Hr.ToString());
+
+                    /*---------------------------------*/
+                    /* accept code */
+                    request = new Button();
+                    request.Text = "حجز موعد";
+                    request.ID = doctor.Id.ToString();
+                    request.CssClass = "btn btn-primary";
+                    request.Click += delegate (object sender, EventArgs e) { request_btn_Click(sender, e); };
+                    request.Style.Add(HtmlTextWriterStyle.Width, "30%");
+                    request.Style.Add(HtmlTextWriterStyle.Margin, "1ex");
+
+                    /*---------------------------------*/
+
+
+
+
+                    div2.Controls.Add(img_div1);
+                    div2.Controls.Add(h5);
+                    div1.Controls.Add(div2);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h53);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(div4);
+                    div1.Controls.Add(request);
+
+                    control.Controls.Add(div1);
+
+                }
+            }
+        }
+        public void RetriveOrthopedicDoctors(HtmlGenericControl control)
+        {
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, h53, img_div1, hr, status;
+            Button request;
+
+
+            midLineDBEntities db = new midLineDBEntities();
+
+            foreach (var doctor in db.Users)
+            {
+                if (doctor.Department == "قسم العظام")
+                {
+                    /* div1 code */
+                    div1 = new HtmlGenericControl("div");
+                    div1.Attributes["class"] = "card m-2";
+                    div1.Style.Add(HtmlTextWriterStyle.Padding, "2ex");
+                    div1.Style.Add(HtmlTextWriterStyle.Width, "20rem");
+                    /*---------------------------------*/
+                    /* div2 code */
+                    div2 = new HtmlGenericControl("div");
+                    div2.Attributes["class"] = "card-body row";
+                    /*---------------------------------*/
+                    /* div3 code */
+                    div3 = new HtmlGenericControl("div");
+                    div3.Attributes["class"] = "row";
+
+                    /* div4 code */
+                    div4 = new HtmlGenericControl("div");
+                    div4.Attributes["class"] = "row";
+                    /*---------------------------------*/
+                    /* img code */
+                    img_div1 = new HtmlGenericControl("img");
+                    img_div1.Attributes["class"] = "rounded-circle ml-2";
+                    img_div1.Attributes["src"] = "../1.png";
+                    img_div1.Attributes["width"] = "40";
+                    img_div1.Attributes["height"] = "40";
+                    /*---------------------------------*/
+                    /* h5 code */
+                    h5 = new HtmlGenericControl("h5");
+                    h5.Attributes["class"] = "card-title";
+                    h5.InnerText = doctor.FullName;
+                    /*---------------------------------*/
+                    /* h52 code */
+                    h52 = new HtmlGenericControl("p");
+                    h52.Attributes["class"] = "card-text";
+                    h52.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h52.InnerText = doctor.AvailableTime;
+                    /*---------------------------------*/
+                    /* h53 code */
+                    h53 = new HtmlGenericControl("p");
+                    h53.Attributes["class"] = "card-text";
+                    h53.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h53.InnerText = doctor.City;
+                    /*---------------------------------*/
+                    /* status code */
+                    status = new HtmlGenericControl("p");
+                    status.Attributes["class"] = "card-text gray";
+                    status.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
+                    status.Style.Add(HtmlTextWriterStyle.Color, "gray");
+
+                    /*---------------------------------*/
+                    /* hr code */
+                    hr = new HtmlGenericControl(HtmlTextWriterTag.Hr.ToString());
+
+                    /*---------------------------------*/
+                    /* accept code */
+                    request = new Button();
+                    request.Text = "حجز موعد";
+                    request.ID = doctor.Id.ToString();
+                    request.CssClass = "btn btn-primary";
+                    request.Click += delegate (object sender, EventArgs e) { request_btn_Click(sender, e); };
+                    request.Style.Add(HtmlTextWriterStyle.Width, "30%");
+                    request.Style.Add(HtmlTextWriterStyle.Margin, "1ex");
+
+                    /*---------------------------------*/
+
+
+
+
+                    div2.Controls.Add(img_div1);
+                    div2.Controls.Add(h5);
+                    div1.Controls.Add(div2);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h53);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(div4);
+                    div1.Controls.Add(request);
+
+                    control.Controls.Add(div1);
+
+                }
+            }
+        }
+        public void RetriveDentDoctors(HtmlGenericControl control)
+        {
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, h53, img_div1, hr, status;
+            Button request;
+
+
+            midLineDBEntities db = new midLineDBEntities();
+
+            foreach (var doctor in db.Users)
+            {
+                if (doctor.Department == "قسم الأسنان")
+                {
+                    /* div1 code */
+                    div1 = new HtmlGenericControl("div");
+                    div1.Attributes["class"] = "card m-2";
+                    div1.Style.Add(HtmlTextWriterStyle.Padding, "2ex");
+                    div1.Style.Add(HtmlTextWriterStyle.Width, "20rem");
+                    /*---------------------------------*/
+                    /* div2 code */
+                    div2 = new HtmlGenericControl("div");
+                    div2.Attributes["class"] = "card-body row";
+                    /*---------------------------------*/
+                    /* div3 code */
+                    div3 = new HtmlGenericControl("div");
+                    div3.Attributes["class"] = "row";
+
+                    /* div4 code */
+                    div4 = new HtmlGenericControl("div");
+                    div4.Attributes["class"] = "row";
+                    /*---------------------------------*/
+                    /* img code */
+                    img_div1 = new HtmlGenericControl("img");
+                    img_div1.Attributes["class"] = "rounded-circle ml-2";
+                    img_div1.Attributes["src"] = "../1.png";
+                    img_div1.Attributes["width"] = "40";
+                    img_div1.Attributes["height"] = "40";
+                    /*---------------------------------*/
+                    /* h5 code */
+                    h5 = new HtmlGenericControl("h5");
+                    h5.Attributes["class"] = "card-title";
+                    h5.InnerText = doctor.FullName;
+                    /*---------------------------------*/
+                    /* h52 code */
+                    h52 = new HtmlGenericControl("p");
+                    h52.Attributes["class"] = "card-text";
+                    h52.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h52.InnerText = doctor.AvailableTime;
+                    /*---------------------------------*/
+                    /* h53 code */
+                    h53 = new HtmlGenericControl("p");
+                    h53.Attributes["class"] = "card-text";
+                    h53.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h53.InnerText = doctor.City;
+                    /*---------------------------------*/
+                    /* status code */
+                    status = new HtmlGenericControl("p");
+                    status.Attributes["class"] = "card-text gray";
+                    status.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
+                    status.Style.Add(HtmlTextWriterStyle.Color, "gray");
+
+                    /*---------------------------------*/
+                    /* hr code */
+                    hr = new HtmlGenericControl(HtmlTextWriterTag.Hr.ToString());
+
+                    /*---------------------------------*/
+                    /* accept code */
+                    request = new Button();
+                    request.Text = "حجز موعد";
+                    request.ID = doctor.Id.ToString();
+                    request.CssClass = "btn btn-primary";
+                    request.Click += delegate (object sender, EventArgs e) { request_btn_Click(sender, e); };
+                    request.Style.Add(HtmlTextWriterStyle.Width, "30%");
+                    request.Style.Add(HtmlTextWriterStyle.Margin, "1ex");
+
+                    /*---------------------------------*/
+
+
+
+
+                    div2.Controls.Add(img_div1);
+                    div2.Controls.Add(h5);
+                    div1.Controls.Add(div2);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h53);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(div4);
+                    div1.Controls.Add(request);
+
+                    control.Controls.Add(div1);
+
+                }
+            }
+        }
+        public void RetrivePediaDoctors(HtmlGenericControl control)
+        {
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, h53, img_div1, hr, status;
+            Button request;
+
+
+            midLineDBEntities db = new midLineDBEntities();
+
+            foreach (var doctor in db.Users)
+            {
+                if (doctor.Department == "قسم الأطفال")
+                {
+                    /* div1 code */
+                    div1 = new HtmlGenericControl("div");
+                    div1.Attributes["class"] = "card m-2";
+                    div1.Style.Add(HtmlTextWriterStyle.Padding, "2ex");
+                    div1.Style.Add(HtmlTextWriterStyle.Width, "20rem");
+                    /*---------------------------------*/
+                    /* div2 code */
+                    div2 = new HtmlGenericControl("div");
+                    div2.Attributes["class"] = "card-body row";
+                    /*---------------------------------*/
+                    /* div3 code */
+                    div3 = new HtmlGenericControl("div");
+                    div3.Attributes["class"] = "row";
+
+                    /* div4 code */
+                    div4 = new HtmlGenericControl("div");
+                    div4.Attributes["class"] = "row";
+                    /*---------------------------------*/
+                    /* img code */
+                    img_div1 = new HtmlGenericControl("img");
+                    img_div1.Attributes["class"] = "rounded-circle ml-2";
+                    img_div1.Attributes["src"] = "../1.png";
+                    img_div1.Attributes["width"] = "40";
+                    img_div1.Attributes["height"] = "40";
+                    /*---------------------------------*/
+                    /* h5 code */
+                    h5 = new HtmlGenericControl("h5");
+                    h5.Attributes["class"] = "card-title";
+                    h5.InnerText = doctor.FullName;
+                    /*---------------------------------*/
+                    /* h52 code */
+                    h52 = new HtmlGenericControl("p");
+                    h52.Attributes["class"] = "card-text";
+                    h52.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h52.InnerText = doctor.AvailableTime;
+                    /*---------------------------------*/
+                    /* h53 code */
+                    h53 = new HtmlGenericControl("p");
+                    h53.Attributes["class"] = "card-text";
+                    h53.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h53.InnerText = doctor.City;
+                    /*---------------------------------*/
+                    /* status code */
+                    status = new HtmlGenericControl("p");
+                    status.Attributes["class"] = "card-text gray";
+                    status.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
+                    status.Style.Add(HtmlTextWriterStyle.Color, "gray");
+
+                    /*---------------------------------*/
+                    /* hr code */
+                    hr = new HtmlGenericControl(HtmlTextWriterTag.Hr.ToString());
+
+                    /*---------------------------------*/
+                    /* accept code */
+                    request = new Button();
+                    request.Text = "حجز موعد";
+                    request.ID = doctor.Id.ToString();
+                    request.CssClass = "btn btn-primary";
+                    request.Click += delegate (object sender, EventArgs e) { request_btn_Click(sender, e); };
+                    request.Style.Add(HtmlTextWriterStyle.Width, "30%");
+                    request.Style.Add(HtmlTextWriterStyle.Margin, "1ex");
+
+                    /*---------------------------------*/
+
+
+
+
+                    div2.Controls.Add(img_div1);
+                    div2.Controls.Add(h5);
+                    div1.Controls.Add(div2);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h53);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(div4);
+                    div1.Controls.Add(request);
+
+                    control.Controls.Add(div1);
+
+                }
+            }
+        }
+        public void RetriveOtherDoctors(HtmlGenericControl control)
+        {
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, h53, img_div1, hr, status;
+            Button request;
+
+
+            midLineDBEntities db = new midLineDBEntities();
+
+            foreach (var doctor in db.Users)
+            {
+                if (doctor.Department == "اقسام اخرى")
+                {
+                    /* div1 code */
+                    div1 = new HtmlGenericControl("div");
+                    div1.Attributes["class"] = "card m-2";
+                    div1.Style.Add(HtmlTextWriterStyle.Padding, "2ex");
+                    div1.Style.Add(HtmlTextWriterStyle.Width, "20rem");
+                    /*---------------------------------*/
+                    /* div2 code */
+                    div2 = new HtmlGenericControl("div");
+                    div2.Attributes["class"] = "card-body row";
+                    /*---------------------------------*/
+                    /* div3 code */
+                    div3 = new HtmlGenericControl("div");
+                    div3.Attributes["class"] = "row";
+
+                    /* div4 code */
+                    div4 = new HtmlGenericControl("div");
+                    div4.Attributes["class"] = "row";
+                    /*---------------------------------*/
+                    /* img code */
+                    img_div1 = new HtmlGenericControl("img");
+                    img_div1.Attributes["class"] = "rounded-circle ml-2";
+                    img_div1.Attributes["src"] = "../1.png";
+                    img_div1.Attributes["width"] = "40";
+                    img_div1.Attributes["height"] = "40";
+                    /*---------------------------------*/
+                    /* h5 code */
+                    h5 = new HtmlGenericControl("h5");
+                    h5.Attributes["class"] = "card-title";
+                    h5.InnerText = doctor.FullName;
+                    /*---------------------------------*/
+                    /* h52 code */
+                    h52 = new HtmlGenericControl("p");
+                    h52.Attributes["class"] = "card-text";
+                    h52.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h52.InnerText = doctor.AvailableTime;
+                    /*---------------------------------*/
+                    /* h53 code */
+                    h53 = new HtmlGenericControl("p");
+                    h53.Attributes["class"] = "card-text";
+                    h53.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h53.InnerText = doctor.City;
+                    /*---------------------------------*/
+                    /* status code */
+                    status = new HtmlGenericControl("p");
+                    status.Attributes["class"] = "card-text gray";
+                    status.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
+                    status.Style.Add(HtmlTextWriterStyle.Color, "gray");
+
+                    /*---------------------------------*/
+                    /* hr code */
+                    hr = new HtmlGenericControl(HtmlTextWriterTag.Hr.ToString());
+
+                    /*---------------------------------*/
+                    /* accept code */
+                    request = new Button();
+                    request.Text = "حجز موعد";
+                    request.ID = doctor.Id.ToString();
+                    request.CssClass = "btn btn-primary";
+                    request.Click += delegate (object sender, EventArgs e) { request_btn_Click(sender, e); };
+                    request.Style.Add(HtmlTextWriterStyle.Width, "30%");
+                    request.Style.Add(HtmlTextWriterStyle.Margin, "1ex");
+
+                    /*---------------------------------*/
+
+
+
+
+                    div2.Controls.Add(img_div1);
+                    div2.Controls.Add(h5);
+                    div1.Controls.Add(div2);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h53);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(div4);
+                    div1.Controls.Add(request);
+
+                    control.Controls.Add(div1);
+
+                }
+            }
+        }
+        public void RetriveNursing(HtmlGenericControl control)
+        {
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, h53, img_div1, hr, status;
+            Button request;
+
+
+            midLineDBEntities db = new midLineDBEntities();
+
+            foreach (var doctor in db.Users)
+            {
+                if (doctor.Department == "قسم التمريض المنزلي")
+                {
+                    /* div1 code */
+                    div1 = new HtmlGenericControl("div");
+                    div1.Attributes["class"] = "card m-2";
+                    div1.Style.Add(HtmlTextWriterStyle.Padding, "2ex");
+                    div1.Style.Add(HtmlTextWriterStyle.Width, "20rem");
+                    /*---------------------------------*/
+                    /* div2 code */
+                    div2 = new HtmlGenericControl("div");
+                    div2.Attributes["class"] = "card-body row";
+                    /*---------------------------------*/
+                    /* div3 code */
+                    div3 = new HtmlGenericControl("div");
+                    div3.Attributes["class"] = "row";
+
+                    /* div4 code */
+                    div4 = new HtmlGenericControl("div");
+                    div4.Attributes["class"] = "row";
+                    /*---------------------------------*/
+                    /* img code */
+                    img_div1 = new HtmlGenericControl("img");
+                    img_div1.Attributes["class"] = "rounded-circle ml-2";
+                    img_div1.Attributes["src"] = "../1.png";
+                    img_div1.Attributes["width"] = "40";
+                    img_div1.Attributes["height"] = "40";
+                    /*---------------------------------*/
+                    /* h5 code */
+                    h5 = new HtmlGenericControl("h5");
+                    h5.Attributes["class"] = "card-title";
+                    h5.InnerText = doctor.FullName;
+                    /*---------------------------------*/
+                    /* h52 code */
+                    h52 = new HtmlGenericControl("p");
+                    h52.Attributes["class"] = "card-text";
+                    h52.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h52.InnerText = doctor.AvailableTime;
+                    /*---------------------------------*/
+                    /* h53 code */
+                    h53 = new HtmlGenericControl("p");
+                    h53.Attributes["class"] = "card-text";
+                    h53.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h53.InnerText = doctor.City;
+                    /*---------------------------------*/
+                    /* status code */
+                    status = new HtmlGenericControl("p");
+                    status.Attributes["class"] = "card-text gray";
+                    status.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
+                    status.Style.Add(HtmlTextWriterStyle.Color, "gray");
+
+                    /*---------------------------------*/
+                    /* hr code */
+                    hr = new HtmlGenericControl(HtmlTextWriterTag.Hr.ToString());
+
+                    /*---------------------------------*/
+                    /* accept code */
+                    request = new Button();
+                    request.Text = "حجز موعد";
+                    request.ID = doctor.Id.ToString();
+                    request.CssClass = "btn btn-primary";
+                    request.Click += delegate (object sender, EventArgs e) { request_btn_Click(sender, e); };
+                    request.Style.Add(HtmlTextWriterStyle.Width, "30%");
+                    request.Style.Add(HtmlTextWriterStyle.Margin, "1ex");
+
+                    /*---------------------------------*/
+
+
+
+
+                    div2.Controls.Add(img_div1);
+                    div2.Controls.Add(h5);
+                    div1.Controls.Add(div2);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(h53);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(div4);
+                    div1.Controls.Add(request);
+
+                    control.Controls.Add(div1);
+
+                }
+            }
+        }
+        protected void request_btn_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            Session["doctorId"] = button.ID;
+            
         }
     }
 }

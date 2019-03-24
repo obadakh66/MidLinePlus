@@ -1,8 +1,12 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="Pediatrics section.aspx.cs" Inherits="midLine.Pages.Dental_Section" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="Pediatrics section.aspx.cs" Inherits="midLine.Pages.nose_and_throat_section" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
- <br />
+<br />
     <div class="mr-0" align="right">
+        <!-- Modal -->
+
+        <form runat="server" dir="rtl">
+     
       <div class="row">
         
          <br /><br />
@@ -24,9 +28,10 @@
         </div><!--/.sidebar-offcanvas-->
           
           <div class="col container">
-              <form runat="server">
+              <div class="row">
+             
               <div class="form-group">
-                  <asp:DropDownList ID="DropDownList1" runat="server">
+                  <asp:DropDownList ID="city" runat="server">
                        <asp:ListItem>اربد</asp:ListItem>
                            <asp:ListItem>عمان</asp:ListItem>
                            <asp:ListItem>الزرقاء</asp:ListItem>
@@ -45,78 +50,17 @@
             
 
               </div>
-                  </form>
+                 
+                  </div>
+              <div class="row" runat="server" id="PediaDoctors"></div>
         
 
             
             
-          <!--div class="row container p-1">
-              <a href="Login.aspx" class="mr-5">
-           <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
-             <div class="card-body">
-
-             <h5 class="card-title text-center">قسم العظام</h5>
-            
-           </div>
-        </div>
-        </a>
-              <a href="Login.aspx">
-           <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
-             <div class="card-body">
-
-             <h5 class="card-title text-center">قسم القلب</h5>
-            
-           </div>
-        </div>
-        </a>
-              <a href="Login.aspx">
-           <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
-             <div class="card-body">
-
-             <h5 class="card-title text-center">قسم الأسنان</h5>
-            
-           </div>
-        </div>
-        </a>
-              <a href="Login.aspx" class="mr-5">
-           <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
-             <div class="card-body">
-
-             <h5 class="card-title text-center">قسم الأذن والحنجرة</h5>
-            
-           </div>
-        </div>
-        </a>
-              <a href="Login.aspx"  >
-           <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
-             <div class="card-body">
-
-             <h5 class="card-title text-center">اقسام اخرى</h5>
-            
-           </div>
-        </div>
-        </a>
-              </a>
-              <a href="Login.aspx"  >
-           <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
-             <div class="card-body">
-
-             <h5 class="card-title text-center">قسم التمريض المنزلي</h5>
-            
-           </div>
-        </div>
-        </a>
-          </!--div><!--/row-->
-     
+       
         </div>
       </div>
-    
+    </form>
       <hr>
 
       <footer class="text-center">
@@ -124,4 +68,5 @@
       </footer>
 
     </div><!--/.container-->
+   
 </asp:Content>

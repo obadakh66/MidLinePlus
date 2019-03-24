@@ -16,7 +16,7 @@ namespace midLine.Pages
 
         protected void Register_btn_Click(object sender, EventArgs e)
         {
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             int check=0;
             foreach(var user in db.Users)
             {

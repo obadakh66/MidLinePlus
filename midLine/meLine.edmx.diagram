@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="054c611765bf42b7b7298a08f0f30e9d" Name="Diagram1">
+      <Diagram DiagramId="1a4bf7920e0c4341ad9aa302bea75de9" Name="Diagram1">
         <EntityTypeShape EntityType="midLineDBModel.AppointmentRequest" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="midLineDBModel.Comment" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="midLineDBModel.Post" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
