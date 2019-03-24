@@ -170,8 +170,8 @@
     </Content>
     <Content Include="Pages\homePage.aspx" />
     <Content Include="Pages\reg.aspx" />
-    <Content Include="Pages\drHome.aspx" />
     <Content Include="Pages\drAppointments.aspx" />
+    <Content Include="Pages\DrsHome.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -317,19 +317,19 @@
     <Compile Include="Pages\reg.aspx.designer.cs">
       <DependentUpon>reg.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WebForm4.aspx.cs">
-      <DependentUpon>drHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\WebForm4.aspx.designer.cs">
-      <DependentUpon>drHome.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\drAppointments.aspx.cs">
       <DependentUpon>drAppointments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\drAppointments.aspx.designer.cs">
       <DependentUpon>drAppointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DrsHome.aspx.cs">
+      <DependentUpon>DrsHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DrsHome.aspx.designer.cs">
+      <DependentUpon>DrsHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Post.cs">
       <DependentUpon>MidLineDB.tt</DependentUpon>

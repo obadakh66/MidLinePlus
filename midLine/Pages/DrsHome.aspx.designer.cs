@@ -10,7 +10,7 @@
 namespace midLine.Pages {
     
     
-    public partial class WebForm4 {
+    public partial class WebForm6 {
         
         /// <summary>
         /// successAlert control.

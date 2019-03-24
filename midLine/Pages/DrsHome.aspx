@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="WebForm4.aspx.cs" Inherits="midLine.Pages.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="DrsHome.aspx.cs" Inherits="midLine.Pages.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <br />
+       <br />
     <div class="mr-0" align="right">
       <div class="row">
         
@@ -44,7 +44,7 @@
               <Asp:TextBox runat="server" ID="availableTime" Rows="3"  class="form-control" placeholder="يرجى ادخال المواعيد المتاحة"/>
    
              </div>
-           <Asp:Button runat="server" ID="update_btn"  class="btn btn-primary" Text="تحديث"/>
+           <Asp:Button runat="server" ID="update_btn"  class="btn btn-primary" OnClick="update_btn_Click" Text="تحديث"/>
 </form>
           
          </div>
