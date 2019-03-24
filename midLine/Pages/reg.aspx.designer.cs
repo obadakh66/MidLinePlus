@@ -13,6 +13,33 @@ namespace midLine.Pages {
     public partial class WebForm3 {
         
         /// <summary>
+        /// successAlert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl successAlert;
+        
+        /// <summary>
+        /// failedAlert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl failedAlert;
+        
+        /// <summary>
+        /// usernameAlert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl usernameAlert;
+        
+        /// <summary>
         /// Username control.
         /// </summary>
         /// <remarks>

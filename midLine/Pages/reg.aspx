@@ -7,6 +7,15 @@
 							<h1>التسجيل</h1>
 						 </div>
 					</div>
+                     <div runat="server" id="successAlert" class="alert alert-success w-75" role="alert" hidden="hidden">
+                 تم انشاء الحساب بنجاح يمكنك تسجيل الدخول الآن !
+             </div>
+                    <div runat="server" id="failedAlert" class="alert alert-danger w-75" role="alert" hidden="hidden">
+                            يرجى التأكد من معلومات
+             </div>
+                     <div runat="server" id="usernameAlert" class="alert alert-danger w-75" role="alert" hidden="hidden">
+                            اسم المستخدم غير متوفر يرجى اختيار اسم مستخدم آحر
+             </div>
                    <form runat="server">
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">اسم المستخدم</label>
@@ -30,7 +39,7 @@
                            </div>
                         <div class="form-group">
                         <label class="float-right" > اختر المدينه</label>
-                       <asp:DropDownList ID="City" runat="server"  class="form-control float-right">
+                       <asp:DropDownList ID="City" runat="server"  class="form-control">
                            <asp:ListItem>اربد</asp:ListItem>
                            <asp:ListItem>عمان</asp:ListItem>
                            <asp:ListItem>الزرقاء</asp:ListItem>
@@ -47,7 +56,7 @@
                       </div>
                           <div class="form-group">
                         <label class="float-right" > اختر الجنس</label>
-                       <asp:DropDownList ID="Gender" runat="server"  class="form-control float-right">
+                       <asp:DropDownList ID="Gender" runat="server"  class="form-control">
                            <asp:ListItem>ذكر</asp:ListItem>
                            <asp:ListItem>انثى</asp:ListItem>
                          
@@ -55,7 +64,7 @@
                       </div>
                          <div class="form-group">
                         <label class="float-right" >  تسجيل كـ</label>
-                       <asp:DropDownList ID="UserType" runat="server"  class="form-control float-right">
+                       <asp:DropDownList ID="UserType" runat="server"  class="form-control">
                            <asp:ListItem Value="1">دكتور</asp:ListItem>
                            <asp:ListItem Value="2">ممرض</asp:ListItem>
                          

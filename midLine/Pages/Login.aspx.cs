@@ -25,11 +25,11 @@ namespace midLine.Pages
 
 
             Functions.Functions login_fun = new Functions.Functions();
-            if (login_fun.login(myUser) == 0)
+            if (login_fun.login(myUser) == 1|| login_fun.login(myUser) == 2)
             {
-               // alert.Attributes.Remove("hidden");
+                Response.Redirect("drHome.aspx");
             }
-            else if (login_fun.login(myUser) == 1)
+            else if (login_fun.login(myUser) == 3)
             {
                 Response.Redirect("homePage.aspx");
             }
