@@ -169,12 +169,14 @@
       <LastGenOutput>mefLineDB.cs</LastGenOutput>
     </Content>
     <Content Include="Pages\Dent Section.aspx" />
+    <Content Include="Pages\edit profile.aspx" />
     <Content Include="Pages\heart section.aspx" />
     <Content Include="Pages\homePage.aspx" />
     <Content Include="Pages\Pediatrics section.aspx" />
     <Content Include="Pages\nursing section.aspx" />
     <Content Include="Pages\Orthopedic section.aspx" />
     <Content Include="Pages\other section.aspx" />
+    <Content Include="Pages\profile.aspx" />
     <Content Include="Pages\reg.aspx" />
     <Content Include="Pages\drAppointments.aspx" />
     <Content Include="Pages\DrsHome.aspx" />
@@ -309,6 +311,13 @@
     <Compile Include="Pages\Dent Section.aspx.designer.cs">
       <DependentUpon>Dent Section.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\edit profile.aspx.cs">
+      <DependentUpon>edit profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\edit profile.aspx.designer.cs">
+      <DependentUpon>edit profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\heart section.aspx.cs">
       <DependentUpon>heart section.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -357,6 +366,13 @@
     </Compile>
     <Compile Include="Pages\other section.aspx.designer.cs">
       <DependentUpon>other section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\reg.aspx.cs">
       <DependentUpon>reg.aspx</DependentUpon>

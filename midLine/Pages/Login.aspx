@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="midLine.Pages.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-        <div class="align-content-center">
-				<div class="content-center w-75">
+        <div class="card bg-light">
+				<div class="card-body mx-auto w-50">
 					 <div class="logo mb-3">
 						 <div class="col-md-12 text-center">
 							<h1>تسجيل الدخول</h1>
@@ -37,7 +37,7 @@
                               </p>
                            </div>
                            <div class="form-group">
-                              <p class="text-center">لا يوجد لديك حساب؟  href="#" id="signup">تسجيل </a></p>
+                              <p class="text-center">لا يوجد لديك حساب؟ <a href="#" id="signup">تسجيل </a></p>
                            </div>
                         </form>
                  

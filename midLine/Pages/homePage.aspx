@@ -12,20 +12,22 @@
             <a href="#" class="list-group-item">المواعيد</a>
             <a href="#" class="list-group-item">تعديل الملف الشخصي</a>
              
-              <a href="#" class="list-group-item active">الاقسام</a>
-            <a href="#" class="list-group-item">قسم العظام</a>
-            <a href="#" class="list-group-item">قسم القلب</a>
-            <a href="#" class="list-group-item">قسم الأسنان</a>
-            <a href="#" class="list-group-item">قسم الاطفال</a>
-            <a href="#" class="list-group-item">اقسام اخرى</a>
+              <a href="homepage.aspx" class="list-group-item active">الاقسام</a>
+            <a href="orthopedic section.aspx" class="list-group-item">قسم العظام</a>
+            <a href="heart section.aspx" class="list-group-item">قسم القلب</a>
+            <a href="dent section.aspx" class="list-group-item">قسم الأسنان</a>
+            <a href="pediatrics section.aspx" class="list-group-item">قسم الاطفال</a>
+            <a href="other section.aspx" class="list-group-item">اقسام اخرى</a>
+                  <a href="nursing section.aspx" class="list-group-item">قسم التمريض المنزلي</a>
             
           </div>
         </div><!--/.sidebar-offcanvas-->
+         
           <div class="col container">
             
             
           <div class="row container p-1">
-              <a href="Login.aspx" class="mr-5">
+              <a href="orthopedic section.aspx" class="mr-5">
            <div class="card m-3" style="width: 18rem;">
              <img class="card-img-top" src="../1.png" alt="Card image cap">
              <div class="card-body">
@@ -35,7 +37,7 @@
            </div>
         </div>
         </a>
-              <a href="Login.aspx">
+              <a href="heart section.aspx">
            <div class="card m-3" style="width: 18rem;">
              <img class="card-img-top" src="../1.png" alt="Card image cap">
              <div class="card-body">
@@ -45,7 +47,7 @@
            </div>
         </div>
         </a>
-              <a href="Login.aspx">
+              <a href="dent section.aspx">
            <div class="card m-3" style="width: 18rem;">
              <img class="card-img-top" src="../1.png" alt="Card image cap">
              <div class="card-body">
@@ -55,7 +57,7 @@
            </div>
         </div>
         </a>
-              <a href="Login.aspx" class="mr-5">
+              <a href="pediatrice section.aspx" class="mr-5">
            <div class="card m-3" style="width: 18rem;">
              <img class="card-img-top" src="../1.png" alt="Card image cap">
              <div class="card-body">
@@ -65,7 +67,7 @@
            </div>
         </div>
         </a>
-              <a href="Login.aspx"  >
+              <a href="other section.aspx"  >
            <div class="card m-3" style="width: 18rem;">
              <img class="card-img-top" src="../1.png" alt="Card image cap">
              <div class="card-body">
@@ -76,7 +78,7 @@
         </div>
         </a>
               
-              <a href="Login.aspx"  >
+              <a href="nursing section.aspx"  >
            <div class="card m-3" style="width: 18rem;">
              <img class="card-img-top" src="../1.png" alt="Card image cap">
              <div class="card-body">

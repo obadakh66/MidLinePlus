@@ -13,7 +13,7 @@ namespace midLine.Functions
         public int login(User user)
         {
             int usertype;
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var myUser = db.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
             var user2 = from u in db.Users
                         where u.Username == user.Username
@@ -56,7 +56,7 @@ namespace midLine.Functions
 
         public bool UpdateInfo(int id, TextBox price, TextBox department, TextBox availableTime)
         {
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var user = db.Users.Where(x => x.Id==id).FirstOrDefault();
             if (user != null)
             {
@@ -81,7 +81,7 @@ namespace midLine.Functions
             Button rejectRequest;
 
            
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
            
             foreach (var request in db.AppointmentRequests)
             {
@@ -183,7 +183,7 @@ namespace midLine.Functions
             }
         protected void accept_btn_Click(object sender, EventArgs e,int requestId)
         {
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var request = db.AppointmentRequests.Where(x => x.ID == requestId).FirstOrDefault();
             request.isAccepted = true;
             db.SaveChanges();
@@ -191,7 +191,7 @@ namespace midLine.Functions
         }
         protected void reject_btn_Click(object sender, EventArgs e,int requestId)
         {
-            midLineDBEntities1 db = new midLineDBEntities1();
+            midLineDBEntities db = new midLineDBEntities();
             var request = db.AppointmentRequests.Where(x => x.ID == requestId).FirstOrDefault();
             request.isAccepted = !true;
             db.SaveChanges();
