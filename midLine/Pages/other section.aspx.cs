@@ -12,7 +12,13 @@ namespace midLine.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             Functions.Functions heartdoctors = new Functions.Functions();
-            heartdoctors.RetriveOtherDoctors(OtherDoctors);
+            heartdoctors.RetriveDoctors(OtherDoctors,"أقسام اخرى");
+        }
+
+        protected void search_Click(object sender, EventArgs e)
+        {
+            Functions.Functions heartdoctors = new Functions.Functions();
+            heartdoctors.RetriveDoctorsFilter(OtherDoctors, "أقسام اخرى", city.SelectedItem.Text);
         }
     }
 }

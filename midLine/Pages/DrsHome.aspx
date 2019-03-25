@@ -37,6 +37,10 @@
              <asp:DropDownList ID="Departments" CssClass="form-control" runat="server">
                  <asp:ListItem>قسم القلب</asp:ListItem>
                  <asp:ListItem>قسم العظام</asp:ListItem>
+                  <asp:ListItem>قسم الأسنان</asp:ListItem>
+                  <asp:ListItem>قسم الأطفال</asp:ListItem>
+                  <asp:ListItem>قسم التمريض المنزلي</asp:ListItem>
+                  <asp:ListItem>قسم أقسام اخرى</asp:ListItem>
                   </asp:DropDownList>
               </div>
                     <div class="form-group">

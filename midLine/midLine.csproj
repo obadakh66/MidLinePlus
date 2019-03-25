@@ -178,6 +178,9 @@
     <Content Include="Pages\reg.aspx" />
     <Content Include="Pages\drAppointments.aspx" />
     <Content Include="Pages\DrsHome.aspx" />
+    <Content Include="Pages\AppRequest.aspx" />
+    <Content Include="Pages\patientAppointments.aspx" />
+    <Content Include="Pages\ReportPage.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -207,6 +210,7 @@
     <Content Include="meLine.edmx.diagram">
       <DependentUpon>meLine.edmx</DependentUpon>
     </Content>
+    <Content Include="Pages\Admin.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -302,6 +306,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>meLine.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Dent Section.aspx.cs">
       <DependentUpon>Dent Section.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -378,6 +389,27 @@
     </Compile>
     <Compile Include="Pages\DrsHome.aspx.designer.cs">
       <DependentUpon>DrsHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AppRequest.aspx.cs">
+      <DependentUpon>AppRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AppRequest.aspx.designer.cs">
+      <DependentUpon>AppRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\patientAppointments.aspx.cs">
+      <DependentUpon>patientAppointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\patientAppointments.aspx.designer.cs">
+      <DependentUpon>patientAppointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReportPage.aspx.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ReportPage.aspx.designer.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Post.cs">
       <DependentUpon>meLine.tt</DependentUpon>
