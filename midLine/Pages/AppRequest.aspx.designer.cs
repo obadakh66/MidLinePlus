@@ -10,7 +10,7 @@
 namespace midLine.Pages {
     
     
-    public partial class WebForm6 {
+    public partial class WebForm4 {
         
         /// <summary>
         /// successAlert control.
@@ -22,48 +22,39 @@ namespace midLine.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl successAlert;
         
         /// <summary>
-        /// updateForm control.
+        /// doctorFullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl updateForm;
+        protected global::System.Web.UI.WebControls.TextBox doctorFullName;
         
         /// <summary>
-        /// price control.
+        /// patientFullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox price;
+        protected global::System.Web.UI.WebControls.TextBox patientFullName;
         
         /// <summary>
-        /// Departments control.
+        /// time control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Departments;
+        protected global::System.Web.UI.WebControls.TextBox time;
         
         /// <summary>
-        /// availableTime control.
+        /// appRequest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox availableTime;
-        
-        /// <summary>
-        /// update_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button update_btn;
+        protected global::System.Web.UI.WebControls.Button appRequest;
     }
 }

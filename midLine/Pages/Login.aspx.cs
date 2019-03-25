@@ -27,7 +27,7 @@ namespace midLine.Pages
             Functions.Functions login_fun = new Functions.Functions();
             if (login_fun.login(myUser) == 1|| login_fun.login(myUser) == 2)
             {
-                Response.Redirect("drHome.aspx");
+                Response.Redirect("DrsHome.aspx");
             }
             else if (login_fun.login(myUser) == 3)
             {

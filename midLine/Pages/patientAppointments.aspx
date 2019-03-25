@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="drAppointments.aspx.cs" Inherits="midLine.Pages.WebForm5" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="patientAppointments.aspx.cs" Inherits="midLine.Pages.WebForm7" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-      <br />
+        <br />
     <div class="mr-0" align="right">
       <div class="row">
         
@@ -20,7 +20,8 @@
              
             <form runat="server">
           <div class="row container p-3 align-content-center" runat="server" id="appContainer">
-          
+              
+              
           </div><!--/row-->
           </form>
      

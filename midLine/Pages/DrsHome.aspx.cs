@@ -9,9 +9,23 @@ namespace midLine.Pages
 {
     public partial class WebForm6 : System.Web.UI.Page
     {
+       
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void update_btn_Click(object sender, EventArgs e)
+        {
+            string DR_ID = Session["userID"].ToString();
+            int Dr_ID = Convert.ToInt16(DR_ID);
+            Functions.Functions heartdoctors = new Functions.Functions();
+
+            bool result = heartdoctors.UpdateInfo(Dr_ID,price,Departments.SelectedItem.Text,availableTime);
+            if (result == true) {
+                successAlert.Attributes.Remove("hidden");
+                updateForm.Visible = false;
+            }
         }
     }
 }
