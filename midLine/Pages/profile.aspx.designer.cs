@@ -13,21 +13,30 @@ namespace midLine.Pages {
     public partial class profile {
         
         /// <summary>
-        /// imageprofile control.
+        /// dropdownlistrate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm imageprofile;
+        protected global::System.Web.UI.WebControls.DropDownList dropdownlistrate;
         
         /// <summary>
-        /// Image1 control.
+        /// rate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Button rate;
+        
+        /// <summary>
+        /// report_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button report_btn;
     }
 }

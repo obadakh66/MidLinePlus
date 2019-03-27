@@ -9,8 +9,8 @@
 					</div>
                    <form runat="server">
                            <div class="form-group">
-                              <label for="exampleInputEmail1" class="float-right">البريد الالكتروني</label>
-                              <Asp:TextBox runat="server" ID="username" class="form-control float-right"  aria-describedby="emailHelp" placeholder="ادخل البريد الالكتروني "/>
+                              <label for="exampleInputEmail1" class="float-right">اسم المستخدم</label>
+                              <Asp:TextBox runat="server" ID="username" class="form-control float-right"  aria-describedby="emailHelp" placeholder="ادخل اسم المستخدم "/>
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رمز الدخول</label>

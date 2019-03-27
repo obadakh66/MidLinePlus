@@ -12,9 +12,9 @@
         
               <div class="col col-sm-2 mr-0" >
           <div class="list-group" >
-            <a href="#" class="list-group-item active">شخصي</a>
+            <a href="homepage.aspx" class="list-group-item active">شخصي</a>
             <a href="#" class="list-group-item">المواعيد</a>
-            <a href="#" class="list-group-item">تعديل الملف الشخصي</a>
+            <a href="edit profile.aspx" class="list-group-item">تعديل الملف الشخصي</a>
              
               <a href="homepage.aspx" class="list-group-item active">الاقسام</a>
             <a href="orthopedic section.aspx" class="list-group-item">قسم العظام</a>
@@ -26,37 +26,104 @@
             
           </div>
         </div><!--/.sidebar-offcanvas-->
-          <form id="imageprofile" runat="server">
+        <div class="container emp-profile">
+            <form method="post" runat="server">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                       
+                        <div class="profile-head">
+                                    <h5>
+                                        Kshiti Ghelani
+                                    </h5>
+                                    <h6>
+                                        Web Developer and Designer
+                                    </h6>
+                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <div class="primary m-0">
+                                    <asp:DropDownList ID="dropdownlistrate" runat="server">
+                                         <asp:ListItem>1</asp:ListItem>
+                                          <asp:ListItem>2</asp:ListItem>
+                                           <asp:ListItem>3</asp:ListItem>
+                                            <asp:ListItem>4</asp:ListItem>
+                                              <asp:ListItem>5</asp:ListItem>
+                                    </asp:DropDownList>
 
-          <asp:Image ID="Image1" runat="server" />
-              </form>
-          <br /> <br />
-
-           <div class=" col-md-9 col-lg-9  "> 
-                  <table class="table table-user-information  border-primary">
-                    <tbody>
-                      <tr>
-                        <td>اسم المستخدم</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>رقم الهاتف</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>المدينه</td>
-                        <td></td>
-                      </tr>
-                   
-                         <tr>
-                             <tr>
-                        <td>نوع المستخدم</td>
-                        <td></td>
-                      </tr>
-                     
-                    </tbody>
-                  </table>
-                  
+                                    <asp:Button ID="rate" runat="server" Text="تقييم" class="btn btn-primary tx-tfm" />
+                                    
+                                  </div>
+                                    <br />
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">معلومات المستخدم</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <Asp:Button runat="server" ID="report_btn" type="submit" class="btn btn-danger" OnClick="report_btn_Click"  Text="ابلاغ"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>اسم المستخدم</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>الاسم الكامل</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>رقم الهاتف</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>المدينه</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>نوع المستخدم</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>  
 
 
     </asp:Content>

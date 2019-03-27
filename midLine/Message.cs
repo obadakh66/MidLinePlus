@@ -12,15 +12,11 @@ namespace midLine
     using System;
     using System.Collections.Generic;
     
-    public partial class Comment
+    public partial class Message
     {
         public int ID { get; set; }
-        public int PostID { get; set; }
-        public int DR_ID { get; set; }
-        public string CommentText { get; set; }
-        public Nullable<System.DateTime> CommentDate { get; set; }
-    
-        public virtual Post Post { get; set; }
-        public virtual User User { get; set; }
+        public string userEmail { get; set; }
+        public string Subject { get; set; }
+        public string Message1 { get; set; }
     }
 }

@@ -35,6 +35,9 @@
     <li class="nav-item active">
       <a class="nav-link" href="#">الدخول</a>
     </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="#" type="hidden">تسجيل الخروج </a>
+      </li>
   </ul>
 </nav>
         <div class="body-content align-content-center">

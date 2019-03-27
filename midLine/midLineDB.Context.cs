@@ -27,6 +27,7 @@ namespace midLine
     
         public virtual DbSet<AppointmentRequest> AppointmentRequests { get; set; }
         public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<Message> Messages { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
         public virtual DbSet<Rating> Ratings { get; set; }
         public virtual DbSet<Report> Reports { get; set; }

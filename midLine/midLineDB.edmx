@@ -23,6 +23,16 @@
           <Property Name="PostID" Type="int" Nullable="false" />
           <Property Name="DR_ID" Type="int" Nullable="false" />
           <Property Name="CommentText" Type="nvarchar" MaxLength="50" />
+          <Property Name="CommentDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Messages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+          <Property Name="Message" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Post">
           <Key>
@@ -179,6 +189,7 @@
         <EntityContainer Name="midLineDBModelStoreContainer">
           <EntitySet Name="AppointmentRequest" EntityType="Self.AppointmentRequest" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rating" EntityType="Self.Rating" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Report" EntityType="Self.Report" Schema="dbo" store:Type="Tables" />
@@ -245,8 +256,18 @@
           <Property Name="PostID" Type="Int32" Nullable="false" />
           <Property Name="DR_ID" Type="Int32" Nullable="false" />
           <Property Name="CommentText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CommentDate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Post" Relationship="Self.FK_Comment_Post" FromRole="Comment" ToRole="Post" />
           <NavigationProperty Name="User" Relationship="Self.FK_Comment_User" FromRole="Comment" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Message1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Post">
           <Key>
@@ -417,6 +438,7 @@
         <EntityContainer Name="midLineDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AppointmentRequests" EntityType="Self.AppointmentRequest" />
           <EntitySet Name="Comments" EntityType="Self.Comment" />
+          <EntitySet Name="Messages" EntityType="Self.Message" />
           <EntitySet Name="Posts" EntityType="Self.Post" />
           <EntitySet Name="Ratings" EntityType="Self.Rating" />
           <EntitySet Name="Reports" EntityType="Self.Report" />
@@ -482,6 +504,17 @@
                 <ScalarProperty Name="PostID" ColumnName="PostID" />
                 <ScalarProperty Name="DR_ID" ColumnName="DR_ID" />
                 <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+                <ScalarProperty Name="CommentDate" ColumnName="CommentDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Messages">
+            <EntityTypeMapping TypeName="midLineDBModel.Message">
+              <MappingFragment StoreEntitySet="Messages">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Message1" ColumnName="Message" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

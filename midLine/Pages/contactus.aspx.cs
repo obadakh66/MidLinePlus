@@ -7,18 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace midLine.Pages
 {
-    public partial class profile : System.Web.UI.Page
+    public partial class contactus : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-      
-
-        protected void report_btn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ReportPage.aspx");
         }
     }
 }

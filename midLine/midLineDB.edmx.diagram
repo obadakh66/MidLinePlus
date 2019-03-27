@@ -4,13 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1a4bf7920e0c4341ad9aa302bea75de9" Name="Diagram1">
-        <EntityTypeShape EntityType="midLineDBModel.AppointmentRequest" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+      <Diagram DiagramId="d14d554f986b4f709e75bbbbcd92a798" Name="Diagram1">
+        <EntityTypeShape EntityType="midLineDBModel.AppointmentRequest" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="midLineDBModel.Comment" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="midLineDBModel.Post" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="midLineDBModel.Rating" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="midLineDBModel.Report" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="midLineDBModel.User" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Message" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Post" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Rating" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Report" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.User" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
         <AssociationConnector Association="midLineDBModel.FK_AppointmentRequest_DR_ID" ManuallyRouted="false" />
         <AssociationConnector Association="midLineDBModel.FK_AppointmentRequest_PatientID" ManuallyRouted="false" />
         <AssociationConnector Association="midLineDBModel.FK_Comment_Post" ManuallyRouted="false" />
