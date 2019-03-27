@@ -10,6 +10,30 @@ namespace midLine.Functions
 {
     public class Functions : System.Web.UI.Page
     {
+        public string image_retrive(int userid)
+        {
+
+
+            var myEntity = new midLineDBEntities();
+
+            var query = myEntity.Users.Where(p => p.Id == userid)
+                           .Select(p => p.ProfilePhoto).FirstOrDefault();
+
+            if (query != null)
+            {
+                byte[] bytes = query;
+                string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
+
+
+
+                return "data:image/png;base64," + base64String;
+
+            }
+            else
+            {
+                return "item_logo.png";
+            }
+        }
         public int login(User user)
         {
             int usertype;

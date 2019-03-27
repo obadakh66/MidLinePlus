@@ -158,15 +158,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="midLineDB.Context.tt">
+    <Content Include="MidLineDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>midLineDB.edmx</DependentUpon>
-      <LastGenOutput>midLineDB.Context.cs</LastGenOutput>
+      <DependentUpon>MidLineDB.edmx</DependentUpon>
+      <LastGenOutput>MidLineDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="midLineDB.tt">
+    <Content Include="MidLineDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>midLineDB.edmx</DependentUpon>
-      <LastGenOutput>midLineDB.cs</LastGenOutput>
+      <DependentUpon>MidLineDB.edmx</DependentUpon>
+      <LastGenOutput>MidLineDB.cs</LastGenOutput>
     </Content>
     <Content Include="Pages\contactus.aspx" />
     <Content Include="Pages\Dent Section.aspx" />
@@ -207,12 +207,12 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Pages\Admin.Master" />
-    <EntityDeploy Include="midLineDB.edmx">
+    <EntityDeploy Include="MidLineDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>midLineDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>MidLineDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="midLineDB.edmx.diagram">
-      <DependentUpon>midLineDB.edmx</DependentUpon>
+    <Content Include="MidLineDB.edmx.diagram">
+      <DependentUpon>MidLineDB.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Pages\Login.aspx" />
@@ -267,7 +267,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppointmentRequest.cs">
-      <DependentUpon>midLineDB.tt</DependentUpon>
+      <DependentUpon>MidLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -279,7 +279,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Comment.cs">
-      <DependentUpon>midLineDB.tt</DependentUpon>
+      <DependentUpon>MidLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -295,22 +295,22 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Message.cs">
-      <DependentUpon>midLineDB.tt</DependentUpon>
+      <DependentUpon>MidLineDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="midLineDB.Context.cs">
+    <Compile Include="MidLineDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>midLineDB.Context.tt</DependentUpon>
+      <DependentUpon>MidLineDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="midLineDB.cs">
+    <Compile Include="MidLineDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>midLineDB.tt</DependentUpon>
+      <DependentUpon>MidLineDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="midLineDB.Designer.cs">
+    <Compile Include="MidLineDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>midLineDB.edmx</DependentUpon>
+      <DependentUpon>MidLineDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
@@ -439,7 +439,7 @@
       <DependentUpon>ReportPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Post.cs">
-      <DependentUpon>midLineDB.tt</DependentUpon>
+      <DependentUpon>MidLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\Site.Master.cs">
@@ -450,10 +450,10 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Rating.cs">
-      <DependentUpon>midLineDB.tt</DependentUpon>
+      <DependentUpon>MidLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Report.cs">
-      <DependentUpon>midLineDB.tt</DependentUpon>
+      <DependentUpon>MidLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -463,7 +463,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>midLineDB.tt</DependentUpon>
+      <DependentUpon>MidLineDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

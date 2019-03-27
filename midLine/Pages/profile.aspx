@@ -82,7 +82,7 @@
                                                 <label>اسم المستخدم</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p></p>
+                                                <p id="username" runat="server"></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -90,7 +90,7 @@
                                                 <label>الاسم الكامل</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p></p>
+                                                 <p id="fullName" runat="server"></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -98,7 +98,7 @@
                                                 <label>رقم الهاتف</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p></p>
+                                                 <p id="Mobile" runat="server"></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -106,7 +106,7 @@
                                                 <label>المدينه</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p></p>
+                                                 <p id="city" runat="server"></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -114,7 +114,7 @@
                                                 <label>نوع المستخدم</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p></p>
+                                                 <p id="userType" runat="server"></p>
                                             </div>
                                         </div>
                             </div>
