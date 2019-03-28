@@ -49,6 +49,15 @@ namespace midLine.Pages {
         protected global::System.Web.UI.WebControls.DropDownList Departments;
         
         /// <summary>
+        /// specilized control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox specilized;
+        
+        /// <summary>
         /// availableTime control.
         /// </summary>
         /// <remarks>

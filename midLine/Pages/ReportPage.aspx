@@ -15,7 +15,9 @@
            <h4 class="modal-title  font-weight-bold" style="margin-bottom:2ex"><asp:Label ID="item_id_label" runat="server"></asp:Label>  </h4>
       
             </div>
-           <center> <label for="report_body" >ساعدنا في معرفه السبب:</label></center>
+        <center>  <h1> <label for="report_body" > ابلاغ </label>   </h1>     </center>
+        <br />
+           <center><h2> <label for="report_body" >ساعدنا في معرفه السبب:</label></h2> </center>
 
 
                 <div class="form-group " style="margin:1ex">

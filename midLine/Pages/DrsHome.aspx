@@ -43,6 +43,12 @@
                   <asp:ListItem>قسم أقسام اخرى</asp:ListItem>
                   </asp:DropDownList>
               </div>
+                     <div class="form-group">
+              <label for="exampleInputEmail1">التخصص</label>
+              <Asp:TextBox runat="server" ID="specilized" Rows="3"  class="form-control" placeholder="يرجى كتابه التخصص"/>
+   
+             </div>
+
                     <div class="form-group">
               <label for="exampleInputEmail1">المواعيد المتاحة</label>
               <Asp:TextBox runat="server" ID="availableTime" Rows="3"  class="form-control" placeholder="يرجى ادخال المواعيد المتاحة"/>
