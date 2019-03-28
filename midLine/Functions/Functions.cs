@@ -10,6 +10,30 @@ namespace midLine.Functions
 {
     public class Functions : System.Web.UI.Page
     {
+        public string image_retrive(int userid)
+        {
+
+
+            var myEntity = new midLineDBEntities();
+
+            var query = myEntity.Users.Where(p => p.Id == userid)
+                           .Select(p => p.ProfilePhoto).FirstOrDefault();
+
+            if (query != null)
+            {
+                byte[] bytes = query;
+                string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
+
+
+
+                return "data:image/png;base64," + base64String;
+
+            }
+            else
+            {
+                return "item_logo.png";
+            }
+        }
         public int login(User user)
         {
             int usertype;
@@ -79,7 +103,7 @@ namespace midLine.Functions
             System.Web.UI.HtmlControls.HtmlGenericControl div1, div2,div3,div4, h5, h52,img_div1,hr,status;
             Button acceptRequest;
             Button rejectRequest;
-
+            LinkButton link ;
            
             midLineDBEntities db = new midLineDBEntities();
            
@@ -151,6 +175,12 @@ namespace midLine.Functions
                     rejectRequest.Click += delegate (object sender, EventArgs e) { reject_btn_Click(sender, e,request.ID); };
                     rejectRequest.Style.Add(HtmlTextWriterStyle.Width, "30%");
                     rejectRequest.Style.Add(HtmlTextWriterStyle.Margin, "1ex");
+                    /*---------------------------------*/
+                    /* link code */
+                    link = new LinkButton();
+                    link.Text = request.User1.FullName;
+                    link.ID = request.User1.Id.ToString();                    
+                    rejectRequest.Click += delegate (object sender, EventArgs e) { LinkedProfile_Click(sender, e); };                    
                     /*---------------------------------*/
                     if (request.isAccepted == null)
                     {
@@ -283,6 +313,14 @@ namespace midLine.Functions
             var request = db.AppointmentRequests.Where(x => x.ID == requestId).FirstOrDefault();
             request.isAccepted = !true;
             db.SaveChanges();
+        }
+        protected void LinkedProfile_Click(object sender, EventArgs e)
+        {
+            LinkButton button = (LinkButton)sender;
+            string patientID = button.ID;
+            Session["USERID"] = patientID;
+            HttpContext.Current.Response.Redirect("edit profile.aspx");
+
         }
         public void RetriveDoctors(HtmlGenericControl control,string department)
         {

@@ -12,7 +12,14 @@ namespace midLine.Pages
        
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string DR_ID = Session["userID"].ToString();
+            int Dr_ID = Convert.ToInt16(DR_ID);
+            var db = new midLineDBEntities();
+            var doctor = db.Users.Where(x => x.Id == Dr_ID).FirstOrDefault();
+            if (doctor.Price == null)
+            {
+                DrForm.Attributes.Remove("hideen");
+            }
         }
 
         protected void update_btn_Click(object sender, EventArgs e)

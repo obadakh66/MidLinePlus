@@ -38,7 +38,7 @@ namespace midLine.Pages
                     UserType = Convert.ToInt16(UserType.SelectedValue),
                 };
 
-                if (newUser != null)
+                if (newUser != null && !newUser.Username.Contains(" "))
                 {
 
                     db.Users.Add(newUser);

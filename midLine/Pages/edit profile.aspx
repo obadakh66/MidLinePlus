@@ -1,14 +1,14 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="Pediatrics section.aspx.cs" Inherits="midLine.Pages.Dental_Section" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="~/Pages/edit profile.aspx.cs" Inherits="midLine.Pages.edit_profile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
  <br />
     <form runat="server">
-    <asp:FileUpload ID="FileUpload1" runat="server" class="float rigth" />
+    <asp:FileUpload ID="imgUploader" runat="server" class="float rigth" />
       
                   
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">اسم المستخدم</label>
-                              <Asp:TextBox runat="server" ID="TextBox1"   class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم "/>
+                              <Asp:TextBox runat="server" ID="username"   class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم "/>
                            </div>
 
             
@@ -28,7 +28,7 @@
                               <label for="exampleInputEmail1" class="float-right"> الرمز السري الجديد</label>
                               <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
                            </div>
-        <asp:Button ID="save" runat="server" Text="حفظ" class="btn btn-primary tx-tfm" />
+        <asp:Button ID="save" runat="server" Text="حفظ" class="btn btn-primary tx-tfm" OnClick="save_Click" />
         
 
             </form>            

@@ -8,7 +8,7 @@
 						 </div>
 					</div>
                      <div runat="server" id="successAlert" class="alert alert-success w-75" role="alert" hidden="hidden">
-                 تم انشاء الحساب بنجاح يمكنك تسجيل الدخول الآن !
+                 انشاء الحساب بنجاح يمكنك تسجيل الدخول  <a href="Login.aspx"> الآن  </a>
              </div>
                     <div runat="server" id="failedAlert" class="alert alert-danger w-75" role="alert" hidden="hidden">
                             يرجى التأكد من معلومات
@@ -35,8 +35,10 @@
                            </div>
                          <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">اعد كتابة</label>
-                              <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
+                              <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" data-match="#pass" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
                            </div>
+                       <asp:CompareValidator ID="CompareValidator1" runat="server" 
+                             ControlToCompare="Password" ControlToValidate="ReEnterPass" ErrorMessage="كلمات المرور غير متطابقة" ForeColor="#29436D"></asp:CompareValidator>
                         <div class="form-group">
                         <label class="float-right" > اختر المدينه</label>
                        <asp:DropDownList ID="City" runat="server"  class="form-control">
