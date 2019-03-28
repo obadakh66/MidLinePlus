@@ -13,6 +13,15 @@ namespace midLine.Pages {
     public partial class profile {
         
         /// <summary>
+        /// P_img control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image P_img;
+        
+        /// <summary>
         /// dropdownlistrate control.
         /// </summary>
         /// <remarks>
