@@ -171,6 +171,7 @@
     <Content Include="Pages\contactus.aspx" />
     <Content Include="Pages\Dent Section.aspx" />
     <Content Include="Pages\edit profile.aspx" />
+    <Content Include="Pages\editprofiledr.aspx" />
     <Content Include="Pages\heart section.aspx" />
     <Content Include="Pages\homePage.aspx" />
     <Content Include="Pages\Pediatrics section.aspx" />
@@ -339,6 +340,13 @@
     </Compile>
     <Compile Include="Pages\edit profile.aspx.designer.cs">
       <DependentUpon>edit profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\editprofiledr.aspx.cs">
+      <DependentUpon>editprofiledr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\editprofiledr.aspx.designer.cs">
+      <DependentUpon>editprofiledr.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\heart section.aspx.cs">
       <DependentUpon>heart section.aspx</DependentUpon>
