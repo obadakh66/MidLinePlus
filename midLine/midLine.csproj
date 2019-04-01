@@ -168,6 +168,7 @@
       <DependentUpon>medLine.edmx</DependentUpon>
       <LastGenOutput>medLine.cs</LastGenOutput>
     </Content>
+    <Content Include="Pages\community.aspx" />
     <Content Include="Pages\contactus.aspx" />
     <Content Include="Pages\Dent Section.aspx" />
     <Content Include="Pages\drprofile.aspx" />
@@ -320,6 +321,13 @@
     </Compile>
     <Compile Include="Pages\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\community.aspx.cs">
+      <DependentUpon>community.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\community.aspx.designer.cs">
+      <DependentUpon>community.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\contactus.aspx.cs">
       <DependentUpon>contactus.aspx</DependentUpon>
