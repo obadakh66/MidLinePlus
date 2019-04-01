@@ -27,7 +27,7 @@
           <%-- -------------------------------------------------------------- --%>
            
             <div class="modal-footer d-flex justify-content-center" id="modal_footer" runat="server">
-                <asp:Button ID="report_btn_modal" CssClass="btn btn-primary all_btn" runat="server" Text="تأكيد" BackColor="#722f37"  />
+                <asp:Button ID="report_btn_modal" CssClass="btn btn-primary all_btn" runat="server" Text="تأكيد" BackColor="#722f37" OnClick="report_btn_modal_Click"  />
            </div>
 
        </div></center>

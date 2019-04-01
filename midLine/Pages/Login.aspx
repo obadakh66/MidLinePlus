@@ -37,7 +37,7 @@
                               </p>
                            </div>
                            <div class="form-group">
-                              <p class="text-center">لا يوجد لديك حساب؟ <a href="#" id="signup">تسجيل </a></p>
+                              <p class="text-center">لا يوجد لديك حساب؟ <a href="reg.aspx" id="signup">تسجيل </a></p>
                            </div>
                         </form>
                  

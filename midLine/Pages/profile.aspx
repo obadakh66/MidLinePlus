@@ -27,12 +27,15 @@
           </div>
         </div><!--/.sidebar-offcanvas-->
         <div class="container emp-profile">
+             <div runat="server" id="failedAlert" class="alert alert-danger w-75" role="alert" hidden="hidden">
+                            لا يمكنك تقييم نفس الشخص اكثر من مرة
+             </div>
             <form method="post" runat="server">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                            
+                          
+                            <asp:Image ID="Image" runat="server" />
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -44,7 +47,9 @@
                                     <h6>
                                         Web Developer and Designer
                                     </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                                    <p class="proile-rating">: عدد التقييمات المرتفعة  <span id="ratesUp" runat="server"></span></p>
+                                    <p class="proile-rating">: عدد التقييمات المنخفضة  <span id="ratesDown" runat="server"></span></p>
+
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <div class="primary m-0">
@@ -56,7 +61,7 @@
                                               <asp:ListItem>5</asp:ListItem>
                                     </asp:DropDownList>
 
-                                    <asp:Button ID="rate" runat="server" Text="تقييم" class="btn btn-primary tx-tfm" />
+                                    <asp:Button ID="rate" runat="server" Text="تقييم" class="btn btn-primary tx-tfm" OnClick="rate_Click"/>
                                     
                                   </div>
                                     <br />

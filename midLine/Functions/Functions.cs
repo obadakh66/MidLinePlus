@@ -136,11 +136,7 @@ namespace midLine.Functions
                     img_div1.Attributes["width"] = "40";
                     img_div1.Attributes["height"] = "40";
                     /*---------------------------------*/
-                    /* h5 code */
-                    h5 = new HtmlGenericControl("h5");
-                    h5.Attributes["class"] = "card-title";
-                    h5.InnerText = request.User1.FullName;
-                    /*---------------------------------*/
+                   
                     /* h52 code */
                     h52 = new HtmlGenericControl("p");
                     h52.Attributes["class"] = "card-text";
@@ -199,7 +195,7 @@ namespace midLine.Functions
                     }
 
                         div2.Controls.Add(img_div1);
-                    div2.Controls.Add(h5);
+                    div2.Controls.Add(link);
                     div1.Controls.Add(div2);
                     div1.Controls.Add(hr);
                     div1.Controls.Add(h52);
@@ -317,9 +313,9 @@ namespace midLine.Functions
         protected void LinkedProfile_Click(object sender, EventArgs e)
         {
             LinkButton button = (LinkButton)sender;
-            string patientID = button.ID;
-            Session["USERID"] = patientID;
-            HttpContext.Current.Response.Redirect("edit profile.aspx");
+            string ID = button.ID;
+            Session["USERID"] = ID;
+            HttpContext.Current.Response.Redirect("profile.aspx");
 
         }
         public void RetriveDoctors(HtmlGenericControl control,string department)

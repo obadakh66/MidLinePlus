@@ -19,6 +19,7 @@ namespace midLine.Pages
             FullName.Text = currentUser.FullName;
             MobileNumber.Text = currentUser.MobileNumber;
             Password.Text = currentUser.Password;
+          
            
         }
 

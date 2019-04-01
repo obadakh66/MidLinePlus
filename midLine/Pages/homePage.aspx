@@ -9,7 +9,7 @@
               <div class="col col-sm-2 mr-0" >
           <div class="list-group" >
             <a href="#" class="list-group-item active">شخصي</a>
-            <a href="#" class="list-group-item">المواعيد</a>
+            <a href="patientAppointments.aspx" class="list-group-item">المواعيد</a>
             <a href="#" class="list-group-item">تعديل الملف الشخصي</a>
              
               <a href="homepage.aspx" class="list-group-item active">الاقسام</a>
@@ -18,7 +18,7 @@
             <a href="dent section.aspx" class="list-group-item">قسم الأسنان</a>
             <a href="pediatrics section.aspx" class="list-group-item">قسم الاطفال</a>
             <a href="other section.aspx" class="list-group-item">اقسام اخرى</a>
-                  <a href="nursing section.aspx" class="list-group-item">قسم التمريض المنزلي</a>
+            <a href="nursing section.aspx" class="list-group-item">قسم التمريض المنزلي</a>
             
           </div>
         </div><!--/.sidebar-offcanvas-->
