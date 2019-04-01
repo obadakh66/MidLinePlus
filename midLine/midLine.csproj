@@ -158,18 +158,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="MedLine.Context.tt">
+    <Content Include="medLine.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MedLine.edmx</DependentUpon>
-      <LastGenOutput>MedLine.Context.cs</LastGenOutput>
+      <DependentUpon>medLine.edmx</DependentUpon>
+      <LastGenOutput>medLine.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="MedLine.tt">
+    <Content Include="medLine.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MedLine.edmx</DependentUpon>
-      <LastGenOutput>MedLine.cs</LastGenOutput>
+      <DependentUpon>medLine.edmx</DependentUpon>
+      <LastGenOutput>medLine.cs</LastGenOutput>
     </Content>
     <Content Include="Pages\contactus.aspx" />
     <Content Include="Pages\Dent Section.aspx" />
+    <Content Include="Pages\drprofile.aspx" />
     <Content Include="Pages\edit profile.aspx" />
     <Content Include="Pages\editprofiledr.aspx" />
     <Content Include="Pages\heart section.aspx" />
@@ -208,12 +209,12 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Pages\Admin.Master" />
-    <EntityDeploy Include="MedLine.edmx">
+    <EntityDeploy Include="medLine.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MedLine.Designer.cs</LastGenOutput>
+      <LastGenOutput>medLine.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="MedLine.edmx.diagram">
-      <DependentUpon>MedLine.edmx</DependentUpon>
+    <Content Include="medLine.edmx.diagram">
+      <DependentUpon>medLine.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Pages\Login.aspx" />
@@ -268,7 +269,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppointmentRequest.cs">
-      <DependentUpon>MedLine.tt</DependentUpon>
+      <DependentUpon>medLine.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -280,7 +281,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Comment.cs">
-      <DependentUpon>MedLine.tt</DependentUpon>
+      <DependentUpon>medLine.tt</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -295,23 +296,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MedLine.Context.cs">
+    <Compile Include="medLine.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MedLine.Context.tt</DependentUpon>
+      <DependentUpon>medLine.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MedLine.cs">
+    <Compile Include="medLine.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MedLine.tt</DependentUpon>
+      <DependentUpon>medLine.tt</DependentUpon>
     </Compile>
-    <Compile Include="MedLine.Designer.cs">
+    <Compile Include="medLine.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MedLine.edmx</DependentUpon>
+      <DependentUpon>medLine.edmx</DependentUpon>
     </Compile>
     <Compile Include="Message.cs">
-      <DependentUpon>MedLine.tt</DependentUpon>
+      <DependentUpon>medLine.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
@@ -333,6 +334,13 @@
     </Compile>
     <Compile Include="Pages\Dent Section.aspx.designer.cs">
       <DependentUpon>Dent Section.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\drprofile.aspx.cs">
+      <DependentUpon>drprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\drprofile.aspx.designer.cs">
+      <DependentUpon>drprofile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\edit profile.aspx.cs">
       <DependentUpon>edit profile.aspx</DependentUpon>
@@ -447,7 +455,7 @@
       <DependentUpon>ReportPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Post.cs">
-      <DependentUpon>MedLine.tt</DependentUpon>
+      <DependentUpon>medLine.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\Site.Master.cs">
@@ -458,10 +466,10 @@
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Rating.cs">
-      <DependentUpon>MedLine.tt</DependentUpon>
+      <DependentUpon>medLine.tt</DependentUpon>
     </Compile>
     <Compile Include="Report.cs">
-      <DependentUpon>MedLine.tt</DependentUpon>
+      <DependentUpon>medLine.tt</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -471,7 +479,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>MedLine.tt</DependentUpon>
+      <DependentUpon>medLine.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

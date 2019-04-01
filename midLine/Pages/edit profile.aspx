@@ -21,7 +21,7 @@
                               <Asp:TextBox runat="server" ID="MobileNumber"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل رقم الهاتف"/>
                            </div>
                         <div class="form-group">
-                              <label for="exampleInputEmail1" class="float-right">رمز السري الحالي</label>
+                              <label for="exampleInputEmail1" class="float-right">الرمز السري الحالي</label>
                               <Asp:TextBox runat="server" ID="Password" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
                            </div>
                          <div class="form-group">
