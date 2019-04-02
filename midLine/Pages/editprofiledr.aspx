@@ -3,42 +3,39 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
  <br />
     <form runat="server">
-    <asp:FileUpload ID="imgUploader" runat="server" class="float rigth"/>
+                      <asp:FileUpload ID="imgUploader" runat="server" class="float rigth"/>
       
                   
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">الاسم الكامل</label>
-                              <Asp:TextBox runat="server" ID="username"   class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم من ثلاثه مقاطع "/>
+                              <Asp:TextBox runat="server" ID="FullName"   class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم من ثلاثه مقاطع "/>
                            </div>
                          
                        
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">التخصص</label>
-                              <Asp:TextBox runat="server" ID="Password" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل التخصص"/>
+                              <Asp:TextBox runat="server" ID="Major"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل التخصص"/>
                            </div>
                             <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right"> سعر الكشفيه</label>
-                              <Asp:TextBox runat="server" ID="TextBox2" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل سعر الكشفيه"/>
+                              <Asp:TextBox runat="server" ID="Price"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل سعر الكشفيه"/>
                            </div>
                          
                             <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right"> الموقع</label>
-                              <Asp:TextBox runat="server" ID="TextBox3" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الموقع"/>
+                              <Asp:TextBox runat="server" ID="Address"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الموقع"/>
                            </div>
-                              <div class="form-group">
-                              <label for="exampleInputEmail1" class="float-right"> الشهادات</label>
-                              <Asp:TextBox runat="server" ID="TextBox4" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الشهادات الحاصل عليها "/>
+                             <div class="form-group">
+                              <label for="exampleInputEmail1" class="float-right"> مواعيد الفراغ</label>
+                              <Asp:TextBox runat="server" ID="Time"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الموقع"/>
                            </div>
 
-                         <div class="form-group">
-                              <label for="exampleInputEmail1" class="float-right"> الرمز السري الحالي</label>
-                              <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
-                           </div>
-        <div class="form-group">
+                        
+                           <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right"> الرمز السري الجديد</label>
-                              <Asp:TextBox runat="server" ID="TextBox1" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
+                              <Asp:TextBox runat="server" ID="Password" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
                            </div>
-        <asp:Button ID="save" runat="server" Text="حفظ" class="btn btn-primary tx-tfm"  />
+        <asp:Button ID="save" runat="server" Text="حفظ" class="btn btn-primary tx-tfm" OnClick="save_Click"/>
         
 
             </form>            

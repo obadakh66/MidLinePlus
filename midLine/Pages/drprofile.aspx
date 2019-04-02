@@ -32,20 +32,21 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                            
+                            <asp:Image ID="image" runat="server" />
                         </div>
                     </div>
                     <div class="col-md-6">
-                       
+                       <div runat="server" id="failedAlert" class="alert alert-danger w-75" role="alert" hidden="hidden">
+                            لا يمكنك تقييم نفس الشخص اكثر من مرة
+                       </div>
                         <div class="profile-head">
-                                    <h5>
-                                        Kshiti Ghelani
+                                    <h5 id="doctorName" runat="server">
+                                        الدكتور 
                                     </h5>
-                                    <h6>
-                                        Web Developer and Designer
-                                    </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                                   
+                                      <p class="proile-rating">: عدد التقييمات المرتفعة  <span id="ratesUp" runat="server"></span></p>
+                                    <p class="proile-rating">: عدد التقييمات المنخفضة  <span id="ratesDown" runat="server"></span></p>
+
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <div class="primary m-0">
@@ -57,7 +58,7 @@
                                               <asp:ListItem>5</asp:ListItem>
                                     </asp:DropDownList>
 
-                                    <asp:Button ID="rate" runat="server" Text="تقييم" class="btn btn-primary tx-tfm" />
+                                    <asp:Button ID="rate" runat="server" Text="تقييم" class="btn btn-primary tx-tfm" OnClick="rate_Click"/>
                                     
                                   </div>
                                     <br />
@@ -68,7 +69,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <Asp:Button runat="server" ID="report_btn" type="submit" class="btn btn-danger"   Text="ابلاغ"/>
+                        <Asp:Button runat="server" ID="report_btn" type="submit" class="btn btn-danger" OnClick="report_btn_Click" Text="ابلاغ"/>
                     </div>
                 </div>
                 <div class="row">
@@ -83,7 +84,7 @@
                                                 <label>اسم الدكتور</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p id="username" runat="server"></p>
+                                                <p id="FullName" runat="server"></p>
                                             </div>
                                         </div>
                                  
@@ -92,7 +93,7 @@
                                                 <label>التخصص</label>
                                             </div>
                                             <div class="col-md-6">
-                                                 <p id="Mobile" runat="server"></p>
+                                                 <p id="Major" runat="server"></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -100,7 +101,7 @@
                                                 <label>الموقع</label>
                                             </div>
                                             <div class="col-md-6">
-                                                 <p id="city" runat="server"></p>
+                                                 <p id="City" runat="server"></p>
                                             </div>
                                         </div>
 
@@ -109,7 +110,7 @@
                                                 <label>سعر الكشفيه</label>
                                             </div>
                                             <div class="col-md-6">
-                                                 <p id="P1" runat="server"></p>
+                                                 <p id="Price" runat="server"></p>
                                             </div>
                                         </div>
                                           
@@ -129,5 +130,6 @@
             </form>           
         </div>  
 
-
+</div>
+        </div>
     </asp:Content>

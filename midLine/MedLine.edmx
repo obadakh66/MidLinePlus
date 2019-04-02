@@ -75,8 +75,12 @@
           <Property Name="Gender" Type="nvarchar" MaxLength="50" />
           <Property Name="AvailableTime" Type="nvarchar" MaxLength="50" />
           <Property Name="ProfilePhoto" Type="image" />
+          <Property Name="CertificatePhoto" Type="image" />
           <Property Name="Price" Type="nvarchar" MaxLength="10" />
           <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Major" Type="nvarchar" MaxLength="50" />
+          <Property Name="isActive" Type="bit" />
         </EntityType>
         <Association Name="FK_AppointmentRequest_DR_ID">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -316,8 +320,12 @@
           <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="AvailableTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ProfilePhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CertificatePhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Price" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Major" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
           <NavigationProperty Name="AppointmentRequests" Relationship="Self.FK_AppointmentRequest_DR_ID" FromRole="User" ToRole="AppointmentRequest" />
           <NavigationProperty Name="AppointmentRequests1" Relationship="Self.FK_AppointmentRequest_PatientID" FromRole="User" ToRole="AppointmentRequest" />
           <NavigationProperty Name="Comments" Relationship="Self.FK_Comment_User" FromRole="User" ToRole="Comment" />
@@ -561,8 +569,12 @@
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="AvailableTime" ColumnName="AvailableTime" />
                 <ScalarProperty Name="ProfilePhoto" ColumnName="ProfilePhoto" />
+                <ScalarProperty Name="CertificatePhoto" ColumnName="CertificatePhoto" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Major" ColumnName="Major" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

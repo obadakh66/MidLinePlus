@@ -12,13 +12,7 @@ namespace midLine.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = Convert.ToInt16(Session["userId"].ToString());
-            midLineDBEntities db = new midLineDBEntities();
-            var currentUser = db.Users.Where(x => x.Id == id).FirstOrDefault();
-            username.Text = currentUser.Username;
-            FullName.Text = currentUser.FullName;
-            MobileNumber.Text = currentUser.MobileNumber;
-            Password.Text = currentUser.Password;
+                     
           
            
         }
@@ -27,11 +21,21 @@ namespace midLine.Pages
         {
             int id = Convert.ToInt16(Session["userId"].ToString());
             midLineDBEntities db = new midLineDBEntities();
-            var currentUser = db.Users.Where(x => x.Id == id).FirstOrDefault();
-            currentUser.Username =  username.Text;
-            currentUser.FullName  = FullName.Text;
-            currentUser.MobileNumber = MobileNumber.Text;
-            currentUser.Password =   Password.Text;
+            var update = from c in db.Users where c.Id == id select c;
+
+            var currentUser = update.FirstOrDefault();
+            if (FullName.Text != "")
+            {
+                currentUser.FullName = FullName.Text;
+            }
+            if (MobileNumber.Text != "")
+            {
+                currentUser.MobileNumber = MobileNumber.Text;
+            }
+            if (Password.Text != "")
+            {
+                currentUser.Password = Password.Text;
+            }
             
             if (imgUploader.PostedFile != null)
             {

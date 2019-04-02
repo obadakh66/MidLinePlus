@@ -176,7 +176,7 @@ namespace midLine.Functions
                     link = new LinkButton();
                     link.Text = request.User1.FullName;
                     link.ID = request.User1.Id.ToString();                    
-                    rejectRequest.Click += delegate (object sender, EventArgs e) { LinkedProfile_Click(sender, e); };                    
+                    link.Click += delegate (object sender, EventArgs e) { LinkedProfile_Click(sender, e); };                    
                     /*---------------------------------*/
                     if (request.isAccepted == null)
                     {

@@ -13,6 +13,51 @@ namespace midLine.Pages {
     public partial class drprofile {
         
         /// <summary>
+        /// image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image image;
+        
+        /// <summary>
+        /// failedAlert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl failedAlert;
+        
+        /// <summary>
+        /// doctorName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl doctorName;
+        
+        /// <summary>
+        /// ratesUp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ratesUp;
+        
+        /// <summary>
+        /// ratesDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ratesDown;
+        
+        /// <summary>
         /// dropdownlistrate control.
         /// </summary>
         /// <remarks>
@@ -40,40 +85,40 @@ namespace midLine.Pages {
         protected global::System.Web.UI.WebControls.Button report_btn;
         
         /// <summary>
-        /// username control.
+        /// FullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl username;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FullName;
         
         /// <summary>
-        /// Mobile control.
+        /// Major control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Mobile;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Major;
         
         /// <summary>
-        /// city control.
+        /// City control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl city;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl City;
         
         /// <summary>
-        /// P1 control.
+        /// Price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl P1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Price;
         
         /// <summary>
         /// userType control.

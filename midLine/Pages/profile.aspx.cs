@@ -21,11 +21,9 @@ namespace midLine.Pages
             fullName.InnerText = currentUser.FullName;
             Mobile.InnerText = currentUser.MobileNumber;
             city.InnerText = currentUser.City;
-            if (currentUser.UserType == 1)
-            { userType.InnerText = "دكتور"; }
-            else if(currentUser.UserType == 2)
-            { userType.InnerText = "ممرض"; }
-            else { userType.InnerText = "مريض"; }
+            
+           
+             userType.InnerText = "مريض"; 
             if (currentUser.ProfilePhoto != null)
             {
                 Image.ImageUrl = function.image_retrive(id);

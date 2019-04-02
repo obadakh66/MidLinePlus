@@ -18,7 +18,7 @@ namespace midLine.Pages
             var doctor = db.Users.Where(x => x.Id == Dr_ID).FirstOrDefault();
             if (doctor.Price == null)
             {
-                DrForm.Attributes.Remove("hideen");
+                DrForm.Attributes.Remove("hidden");
             }
         }
 

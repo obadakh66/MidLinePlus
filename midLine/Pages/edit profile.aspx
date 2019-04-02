@@ -6,10 +6,7 @@
     <asp:FileUpload ID="imgUploader" runat="server" class="float rigth" />
       
                   
-                           <div class="form-group">
-                              <label for="exampleInputEmail1" class="float-right">اسم المستخدم</label>
-                              <Asp:TextBox runat="server" ID="username"   class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم "/>
-                           </div>
+                          
 
             
                            <div class="form-group">
@@ -18,7 +15,7 @@
                            </div>
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رقم الهاتف</label>
-                              <Asp:TextBox runat="server" ID="MobileNumber"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل رقم الهاتف"/>
+                              <Asp:TextBox runat="server" ID="MobileNumber"  class="form-control" />
                            </div>
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">الرمز السري الحالي</label>

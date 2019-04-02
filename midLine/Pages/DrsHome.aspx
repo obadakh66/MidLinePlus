@@ -24,7 +24,7 @@
           <div class="row container p-3 align-content-center" runat="server" id="updateForm">
             
             <div class="col-4"></div>
-              <div class="card p-3 align-content-center col" style="width: 30rem;" id="DrForm" runat="server">
+              <div class="card p-3 align-content-center col" style="width: 30rem;" id="DrForm" runat="server" hidden="hidden">
                    <h3 class="card-title">يرجى اكمال معلوماتك</h3>
               <form runat="server">
                          <div class="form-group">
