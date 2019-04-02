@@ -19,7 +19,7 @@
                    <form runat="server">
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">اسم المستخدم</label>
-                              <Asp:TextBox runat="server" ID="Username"  class="form-control float-right" aria-describedby="emailHelp" placeholder="ادخل اسم المستخدم"/>
+                              <Asp:TextBox runat="server" ID="Username"  class="form-control float-right" aria-describedby="emailHelp" placeholder="ادخل اسم المستخدم" required="required"/>
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">الاسم الكامل</label>

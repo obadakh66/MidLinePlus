@@ -24,9 +24,14 @@
           <div class="row container p-3 align-content-center" runat="server" id="updateForm">
             
             <div class="col-4"></div>
-              <div class="card p-3 align-content-center col" style="width: 30rem;" id="DrForm" runat="server" hidden="hidden">
+              <div class="card p-3 align-content-center col" style="width: 30rem;" id="DrForm" runat="server">
                    <h3 class="card-title">يرجى اكمال معلوماتك</h3>
               <form runat="server">
+                         <div class="form-group">
+              <label for="exampleInputEmail1">ارفاق الشهاده المعتمده</label>
+             <asp:FileUpload ID="degree" runat="server" text="تحميل" />
+   
+             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">سعر الكشفية</label>
               <Asp:TextBox runat="server" ID="price"  class="form-control" placeholder="يرجى ادخال سعر الكشفية"/>
@@ -43,6 +48,12 @@
                   <asp:ListItem>قسم أقسام اخرى</asp:ListItem>
                   </asp:DropDownList>
               </div>
+                     <div class="form-group">
+              <label for="exampleInputEmail1">التخصص</label>
+              <Asp:TextBox runat="server" ID="specilized" Rows="3"  class="form-control" placeholder="يرجى كتابه التخصص"/>
+   
+             </div>
+
                     <div class="form-group">
               <label for="exampleInputEmail1">المواعيد المتاحة</label>
               <Asp:TextBox runat="server" ID="availableTime" Rows="3"  class="form-control" placeholder="يرجى ادخال المواعيد المتاحة"/>
@@ -58,7 +69,9 @@
         </div>
       </div>
     
-     
+     <br /> 
+        <br />
+        <br />
 
       <footer class="text-center fixed-bottom">
            <hr>

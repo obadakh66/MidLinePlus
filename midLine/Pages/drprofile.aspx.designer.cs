@@ -10,87 +10,78 @@
 namespace midLine.Pages {
     
     
-    public partial class WebForm6 {
+    public partial class drprofile {
         
         /// <summary>
-        /// successAlert control.
+        /// dropdownlistrate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl successAlert;
+        protected global::System.Web.UI.WebControls.DropDownList dropdownlistrate;
         
         /// <summary>
-        /// updateForm control.
+        /// rate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl updateForm;
+        protected global::System.Web.UI.WebControls.Button rate;
         
         /// <summary>
-        /// DrForm control.
+        /// report_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DrForm;
+        protected global::System.Web.UI.WebControls.Button report_btn;
         
         /// <summary>
-        /// degree control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload degree;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl username;
         
         /// <summary>
-        /// price control.
+        /// Mobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox price;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Mobile;
         
         /// <summary>
-        /// Departments control.
+        /// city control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Departments;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl city;
         
         /// <summary>
-        /// specilized control.
+        /// P1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox specilized;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl P1;
         
         /// <summary>
-        /// availableTime control.
+        /// userType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox availableTime;
-        
-        /// <summary>
-        /// update_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button update_btn;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl userType;
     }
 }
