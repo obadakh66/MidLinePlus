@@ -29,7 +29,7 @@
               <form runat="server">
                          <div class="form-group">
               <label for="exampleInputEmail1">ارفاق الشهاده المعتمده</label>
-             <asp:FileUpload ID="degree" runat="server" text="تحميل" />
+             <asp:FileUpload ID="imgUploader" runat="server" text="تحميل" />
    
              </div>
             <div class="form-group">
@@ -50,13 +50,18 @@
               </div>
                      <div class="form-group">
               <label for="exampleInputEmail1">التخصص</label>
-              <Asp:TextBox runat="server" ID="specilized" Rows="3"  class="form-control" placeholder="يرجى كتابه التخصص"/>
+              <Asp:TextBox runat="server" ID="specilized"   class="form-control" placeholder="يرجى كتابه التخصص"/>
    
              </div>
 
                     <div class="form-group">
               <label for="exampleInputEmail1">المواعيد المتاحة</label>
-              <Asp:TextBox runat="server" ID="availableTime" Rows="3"  class="form-control" placeholder="يرجى ادخال المواعيد المتاحة"/>
+              <Asp:TextBox runat="server" ID="availableTime"  class="form-control" placeholder="يرجى ادخال المواعيد المتاحة"/>
+   
+             </div>
+                   <div class="form-group">
+              <label for="exampleInputEmail1">العنوان</label>
+              <Asp:TextBox runat="server" ID="Address"   class="form-control" placeholder="يرجى ادخال المواعيد المتاحة"/>
    
              </div>
            <Asp:Button runat="server" ID="update_btn"  class="btn btn-primary" OnClick="update_btn_Click" Text="تحديث"/>

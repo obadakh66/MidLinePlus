@@ -13,7 +13,7 @@ namespace midLine.Pages
         midLineDBEntities db = new midLineDBEntities();
         protected void Page_Load(object sender, EventArgs e)
         {            
-            int id = Convert.ToInt16(Session["USERID"].ToString());
+            int id = Convert.ToInt16(Session["user"].ToString());
             int rankingUp=0;
             int rankingDown = 0;
             var currentUser = db.Users.Where(x => x.Id == id).FirstOrDefault();

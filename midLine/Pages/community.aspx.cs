@@ -9,9 +9,12 @@ namespace midLine.Pages
 {
     public partial class community : System.Web.UI.Page
     {
+       public string hi = "مرحباااا";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+           
         }
     }
 }

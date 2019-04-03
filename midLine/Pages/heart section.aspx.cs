@@ -13,6 +13,7 @@ namespace midLine.Pages
         {
             Functions.Functions heartdoctors = new Functions.Functions();
             heartdoctors.RetriveDoctors(heartDoctors,"قسم القلب");
+            Session["userId"] = Session["userId"];
         }
 
         protected void search_Click(object sender, EventArgs e)

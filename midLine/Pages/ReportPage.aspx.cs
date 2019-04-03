@@ -17,12 +17,12 @@ namespace midLine.Pages
         protected void report_btn_modal_Click(object sender, EventArgs e)
         {
             Functions.Functions function = new Functions.Functions();
-            int id = Convert.ToInt16(Session["userId"].ToString());
+            int id = Convert.ToInt16(Session["user"].ToString());
             midLineDBEntities db = new midLineDBEntities();
             var newReport = new Report
             {
                 ReportedUserID = Convert.ToInt16(Session["reportedUser"].ToString()),
-                UserID = Convert.ToInt16(Session["userId"].ToString()),
+                UserID = id,
                 ReportText = item_notes.InnerText.ToString()
             };
             db.Reports.Add(newReport);

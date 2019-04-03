@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,14 +25,35 @@ namespace midLine.Pages
 
         protected void update_btn_Click(object sender, EventArgs e)
         {
+            byte[] bytes;
+            bool result;
             string DR_ID = Session["userID"].ToString();
             int Dr_ID = Convert.ToInt16(DR_ID);
             Functions.Functions heartdoctors = new Functions.Functions();
+            if (imgUploader.PostedFile != null)
+            {
 
-            bool result = heartdoctors.UpdateInfo(Dr_ID,price,Departments.SelectedItem.Text,availableTime);
-            if (result == true) {
-                successAlert.Attributes.Remove("hidden");
-                updateForm.Visible = false;
+
+                using (BinaryReader br = new BinaryReader(imgUploader.PostedFile.InputStream))
+                {
+                    bytes = br.ReadBytes(imgUploader.PostedFile.ContentLength);
+                }
+                result = heartdoctors.UpdateInfo(Dr_ID, price, Departments.SelectedItem.Text, availableTime, specilized.Text, Address.Text, bytes);
+                if (result == true)
+                {
+                    successAlert.Attributes.Remove("hidden");
+                    updateForm.Visible = false;
+                }
+            }
+            else
+            {
+                result = heartdoctors.UpdateInfo(Dr_ID, price, Departments.SelectedItem.Text, availableTime, specilized.Text, Address.Text, null);
+
+                if (result == true)
+                {
+                    successAlert.Attributes.Remove("hidden");
+                    updateForm.Visible = false;
+                }
             }
         }
     }

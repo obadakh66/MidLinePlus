@@ -53,7 +53,7 @@ namespace midLine.Functions
                 string full_name = user.FullName;
                 Session["full_name"] = full_name;
                 Session["userID"] = user3.Id;
-                Session["edit_user"] = user3;
+                Session["user"] = user3.Id;
                 if (myUser.UserType == 1) { usertype = 1; }
                 else if (myUser.UserType == 2) { usertype = 2; }
                 else{ usertype=3; }
@@ -78,7 +78,7 @@ namespace midLine.Functions
 
         }
 
-        public bool UpdateInfo(int id, TextBox price, string department, TextBox availableTime)
+        public bool UpdateInfo(int id, TextBox price, string department, TextBox availableTime,string major,string address, byte[] img)
         {
             midLineDBEntities db = new midLineDBEntities();
             var user = db.Users.Where(x => x.Id==id).FirstOrDefault();
@@ -88,7 +88,9 @@ namespace midLine.Functions
                 user.Price = price.Text;
                 user.Department = department;
                 user.AvailableTime = availableTime.Text;
-
+                user.Major = major;
+                user.Address = address;
+                user.CertificatePhoto = img;
                 db.SaveChanges();
                 return true;
             }
@@ -210,7 +212,7 @@ namespace midLine.Functions
         public void RetrivePatientAppointments(int id, HtmlGenericControl control)
         {
             System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, img_div1, hr, status;
-           
+            LinkButton link;
 
             midLineDBEntities db = new midLineDBEntities();
 
@@ -243,10 +245,11 @@ namespace midLine.Functions
                     img_div1.Attributes["width"] = "40";
                     img_div1.Attributes["height"] = "40";
                     /*---------------------------------*/
-                    /* h5 code */
-                    h5 = new HtmlGenericControl("h5");
-                    h5.Attributes["class"] = "card-title";
-                    h5.InnerText = request.User1.FullName;
+                    /* link code */
+                    link = new LinkButton();
+                    link.Text = "الدكتور " + request.User1.FullName;
+                    link.ID = request.User1.Username;
+                    link.Click += delegate (object sender, EventArgs e) { LinkedProfileDr_Click(sender, e); };
                     /*---------------------------------*/
                     /* h52 code */
                     h52 = new HtmlGenericControl("p");
@@ -283,7 +286,7 @@ namespace midLine.Functions
                     }
 
                     div2.Controls.Add(img_div1);
-                    div2.Controls.Add(h5);
+                    div2.Controls.Add(link);
                     div1.Controls.Add(div2);
                     div1.Controls.Add(hr);
                     div1.Controls.Add(h52);
@@ -320,15 +323,15 @@ namespace midLine.Functions
         }
         public void RetriveDoctors(HtmlGenericControl control,string department)
         {
-            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, h53,h54, img_div1, hr, status;
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h52, h53,h54,h55, img_div1, hr, status;
             Button request;
-
+            LinkButton link;
 
             midLineDBEntities db = new midLineDBEntities();
 
             foreach (var doctor in db.Users)
             {
-                if (doctor.Department == department)
+                if (doctor.Department == department &&doctor.isActive==true)
                 {
                     /* div1 code */
                     div1 = new HtmlGenericControl("div");
@@ -355,11 +358,7 @@ namespace midLine.Functions
                     img_div1.Attributes["width"] = "40";
                     img_div1.Attributes["height"] = "40";
                     /*---------------------------------*/
-                    /* h5 code */
-                    h5 = new HtmlGenericControl("h5");
-                    h5.Attributes["class"] = "card-title";
-                    h5.InnerText = doctor.FullName;
-                    /*---------------------------------*/
+                  
                     /* h52 code */
                     h52 = new HtmlGenericControl("p");
                     h52.Attributes["class"] = "card-text";
@@ -370,7 +369,7 @@ namespace midLine.Functions
                     h53 = new HtmlGenericControl("p");
                     h53.Attributes["class"] = "card-text";
                     h53.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
-                    h53.InnerText = doctor.City;
+                    h53.InnerText = doctor.City +"-"+doctor.Address;
                     /*---------------------------------*/
                     /* h54 code */
                     h54 = new HtmlGenericControl("p");
@@ -378,12 +377,24 @@ namespace midLine.Functions
                     h54.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
                     h54.InnerText ="سعر الكشفية :"+ doctor.Price;
                     /*---------------------------------*/
+                    /* h55 code */
+                    h55 = new HtmlGenericControl("p");
+                    h55.Attributes["class"] = "card-text";
+                    h55.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h55.InnerText = "التخصص" + doctor.Major;
+                    /*---------------------------------*/
                     /* status code */
                     status = new HtmlGenericControl("p");
                     status.Attributes["class"] = "card-text gray";
                     status.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
                     status.Style.Add(HtmlTextWriterStyle.Color, "gray");
 
+                    /*---------------------------------*/
+                    /* link code */
+                    link = new LinkButton();
+                    link.Text ="الدكتور "+ doctor.FullName;
+                    link.ID = doctor.Username;
+                    link.Click += delegate (object sender, EventArgs e) { LinkedProfileDr_Click(sender, e); };
                     /*---------------------------------*/
                     /* hr code */
                     hr = new HtmlGenericControl(HtmlTextWriterTag.Hr.ToString());
@@ -404,13 +415,14 @@ namespace midLine.Functions
 
 
                     div2.Controls.Add(img_div1);
-                    div2.Controls.Add(h5);
+                    div2.Controls.Add(link);
                     div1.Controls.Add(div2);
                     div1.Controls.Add(hr);
                     div1.Controls.Add(h52);
                     div1.Controls.Add(h52);
                     div1.Controls.Add(h53);
                     div1.Controls.Add(h54);
+                    div1.Controls.Add(h55);
                     div1.Controls.Add(hr);
                     div1.Controls.Add(div4);
                     div1.Controls.Add(request);
@@ -419,6 +431,19 @@ namespace midLine.Functions
 
                 }
             }
+        }
+        protected void LinkedProfileDr_Click(object sender, EventArgs e)
+        {
+
+            midLineDBEntities db = new midLineDBEntities();
+            LinkButton button = (LinkButton)sender;
+            string ID = button.ID;
+
+            Session["USERID"] = ID;
+            var doctor = db.Users.Where(x => x.Username == ID).FirstOrDefault();
+            Session["doctorid"] = doctor.Id;
+            HttpContext.Current.Response.Redirect("drprofile.aspx");
+
         }
         public void RetriveDoctorsFilter(HtmlGenericControl control, string department,string city)
         {
@@ -527,7 +552,19 @@ namespace midLine.Functions
         {
             Button button = (Button)sender;
             Session["doctorId"] = button.ID;
-            HttpContext.Current.Response.Redirect("AppRequest.aspx");
+            midLineDBEntities db = new midLineDBEntities();
+            int patientid = Convert.ToInt16(Session["user"].ToString());
+            var count = db.AppointmentRequests.Where(x => x.PatientID == patientid).FirstOrDefault();
+            if (count == null)
+            {
+                HttpContext.Current.Response.Redirect("AppRequest.aspx");
+            }
+            else
+            {
+                HttpContext.Current.Response.Write("<script>alert('لايمكنك طلب اكثر من موعد ');</script>");
+               
+
+            }
 
         }
     }

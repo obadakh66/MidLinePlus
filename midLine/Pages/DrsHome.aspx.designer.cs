@@ -40,13 +40,13 @@ namespace midLine.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DrForm;
         
         /// <summary>
-        /// degree control.
+        /// imgUploader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload degree;
+        protected global::System.Web.UI.WebControls.FileUpload imgUploader;
         
         /// <summary>
         /// price control.
@@ -83,6 +83,15 @@ namespace midLine.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox availableTime;
+        
+        /// <summary>
+        /// Address control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Address;
         
         /// <summary>
         /// update_btn control.
