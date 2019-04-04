@@ -13,6 +13,15 @@ namespace midLine.Pages {
     public partial class community {
         
         /// <summary>
+        /// successAlert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl successAlert;
+        
+        /// <summary>
         /// ques control.
         /// </summary>
         /// <remarks>
@@ -38,5 +47,14 @@ namespace midLine.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button send;
+        
+        /// <summary>
+        /// postBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl postBox;
     }
 }

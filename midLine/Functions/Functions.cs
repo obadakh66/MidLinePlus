@@ -567,5 +567,147 @@ namespace midLine.Functions
             }
 
         }
+        public void RetrivePosts(HtmlGenericControl control,int userType)
+        {
+
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4,div5,commentBody,commentTime,footer, commenterName, h52, hr, status;
+            LinkButton link;
+            Button commentBtn;
+            TextBox commentText;
+            midLineDBEntities db = new midLineDBEntities();
+
+            foreach (var post in db.Posts)
+            {
+               
+                
+                    /* div1 code */
+                    div1 = new HtmlGenericControl("div");
+                    div1.Attributes["class"] = "card m-2";
+                    div1.Style.Add(HtmlTextWriterStyle.Padding, "2ex");
+                    div1.Style.Add(HtmlTextWriterStyle.Width, "90%");
+                    /*---------------------------------*/
+                    /* div2 code */
+                    div2 = new HtmlGenericControl("div");
+                    div2.Attributes["class"] = "card-body row";
+                    /*---------------------------------*/
+                    /* div3 code */
+                    div3 = new HtmlGenericControl("div");
+                    div3.Attributes["class"] = "row";
+
+                    /* div4 code */
+                    div4 = new HtmlGenericControl("div");
+                    div4.Attributes["class"] = "row";
+                    
+                /*---------------------------------*/
+
+                /* link code */
+                link = new LinkButton();
+                    link.Text =  post.User.FullName;
+                    link.ID = post.User.Username;
+                    link.Font.Size = FontUnit.XLarge;
+                    link.Click += delegate (object sender, EventArgs e) { LinkedProfileDr_Click(sender, e); };
+                    /*---------------------------------*/
+                    /* h52 code */
+                    h52 = new HtmlGenericControl("h4");
+                    h52.Attributes["class"] = "card-text";
+                    h52.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    h52.InnerText = post.PostDate.ToString();
+                    /*---------------------------------*/
+                    /* h52 code */
+                    status = new HtmlGenericControl("h4");
+                    status.Attributes["class"] = "card-text gray";
+                    status.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
+                    status.InnerText = post.PostText;
+                    /*---------------------------------*/
+                    /* hr code */
+                    hr = new HtmlGenericControl(HtmlTextWriterTag.Hr.ToString());
+
+                /*---------------------------------*/
+              
+                commentText = new TextBox();
+                commentText.Attributes["placeholder"] = "اكتب تعليقا...";
+                commentText.ID = post.User.Username +DateTime.Today.Millisecond.ToString();
+                commentText.Style.Add(HtmlTextWriterStyle.Width, "90%");
+                commentText.CssClass = "form-control col m-2";
+
+                /* link code */
+                commentBtn = new Button();
+                commentBtn.Text = "تعليق";
+                commentBtn.ID = post.User.Id.ToString();
+                commentBtn.Font.Size = FontUnit.XLarge;
+                commentBtn.Click += delegate (object sender, EventArgs e) { comment_Click(sender, e,commentText.Text); };
+                commentBtn.CssClass = "btn btn-primary float-right col m-2";
+                /*---------------------------------*/
+
+                footer = new HtmlGenericControl("div");
+                footer.Attributes["class"] = "row";
+                footer.ID = post.ID.ToString();
+                footer.Style.Add(HtmlTextWriterStyle.Width, "90%");
+                footer.Controls.Add(commentText);
+                footer.Controls.Add(commentBtn);
+
+                div2.Controls.Add(link);
+                    div1.Controls.Add(div2);
+                    div1.Controls.Add(hr);
+                    div1.Controls.Add(h52);
+                    div1.Controls.Add(status);
+                    div1.Controls.Add(hr);
+                    foreach(var comment in post.Comments)
+                {
+                    /* link code */
+                    commenterName = new HtmlGenericControl("p");
+                    commenterName.InnerText = comment.User.FullName;                   
+                    
+                    /*---------------------------------*/
+                    /* h52 code */
+                    commentTime = new HtmlGenericControl("h3");
+                    commentTime.Attributes["class"] = "card-text float-left";
+                    commentTime.Style.Add(HtmlTextWriterStyle.MarginTop, "0.5ex");
+                    commentTime.InnerText = comment.CommentDate.ToString();
+                    /*---------------------------------*/
+                    /* h52 code */
+                    commentBody = new HtmlGenericControl("p");
+                    commentBody.Attributes["class"] = "card-text gray";
+                    commentBody.Style.Add(HtmlTextWriterStyle.MarginRight, "5ex");
+                    commentBody.InnerText = comment.CommentText;
+                    /*---------------------------------*/
+                    div5 = new HtmlGenericControl("div");
+                    div5.Attributes["class"] = "row";
+                    div5.Attributes["class"] = "card m-1";
+                    div5.Style.Add(HtmlTextWriterStyle.Width, "90%");
+                    div5.Controls.Add(commenterName);
+                    //div5.Controls.Add(commentTime);
+                    div5.Controls.Add(commentBody);
+                    div4.Controls.Add(div5);
+                    div1.Controls.Add(div4);
+                }
+                if (userType == 1)
+                {
+                    div1.Controls.Add(footer);
+                }
+                control.Controls.Add(div1);
+
+                
+            }
+        }
+        protected void comment_Click(object sender, EventArgs e,string commentText)
+        {
+
+            midLineDBEntities db = new midLineDBEntities();
+            Button button = (Button)sender;
+            int userId =Convert.ToInt16(button.ID);
+            int postId = Convert.ToInt16(button.Parent.ID);
+            Comment newComment = new Comment {
+                DR_ID = userId,
+                PostID = postId,
+                CommentDate = DateTime.Now,
+                CommentText = commentText
+
+            };
+            db.Comments.Add(newComment);
+            db.SaveChanges();
+           
+
+        }
     }
 }

@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bcec089e03634d0a8fbfe80fba5dde83" Name="Diagram1">
+      <Diagram DiagramId="c058220478634eaab29b6130e12fae2a" Name="Diagram1">
         <EntityTypeShape EntityType="midLineDBModel.AppointmentRequest" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="midLineDBModel.Comment" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Comment" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="midLineDBModel.Message" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="midLineDBModel.Post" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="midLineDBModel.Rating" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="midLineDBModel.Report" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="midLineDBModel.User" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Rating" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.Report" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="midLineDBModel.User" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
         <AssociationConnector Association="midLineDBModel.FK_AppointmentRequest_DR_ID" ManuallyRouted="false" />
         <AssociationConnector Association="midLineDBModel.FK_AppointmentRequest_PatientID" ManuallyRouted="false" />
         <AssociationConnector Association="midLineDBModel.FK_Comment_Post" ManuallyRouted="false" />

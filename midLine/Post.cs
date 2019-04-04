@@ -24,6 +24,7 @@ namespace midLine
         public int UserID { get; set; }
         public Nullable<System.DateTime> PostDate { get; set; }
         public string PostText { get; set; }
+        public string Department { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }
