@@ -1,17 +1,12 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="community.aspx.cs" Inherits="midLine.Pages.community" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="PostPage.aspx.cs" Inherits="midLine.Pages.WebForm9" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
    
-    <form runat="server">
-    <div class="card text-lg-right  card bg-light card-body mx-auto w-75">
+    <div class="card text-lg-right  card bg-light card-body" >
    <div runat="server" id="successAlert" class="alert alert-success w-75" role="alert" hidden="hidden">
                  تم نشر منشورك بنجاح !
              </div>
-  <div class="card-body">
+        <form runat="server">
+  <div class="card w-50 p-5" style="margin-right:300px">
       <h5 class="text-center">هل يوجد لديك سؤال؟</h5>
       <br />
       <label class="float-right" > اختر القسم</label>
@@ -33,13 +28,39 @@
   
     <asp:Button ID="send" runat="server"  CssClass="btn btn-primary float-right" Text="ارسال" OnClick="send_Click"/>
   </div>
-        
+            <br />
+             <div class="card p-5 w-50 row" style="margin-right:300px">
+                 <div >
+      <h5 class="text-center">اضف تعليق </h5>
+      <br />
+            <div class="row">    
+      <label class="float-right" > ادخل رقم المنشور</label>
+                </div>
+                  <div class="row">
+       <asp:TextBox ID="postId" CssClass="form-control" runat="server"></asp:TextBox>
+                     </div>
+      <br />
+          <div class="row">       
+    <label class="float-right">اكتب تعليق</label>
+              </div>
+                 <div class="row">
+             <asp:TextBox ID="commentText" CssClass="form-control float-right" runat="server"/>
 </div>
-        <div class="card text-lg-right  card bg-light card-body mx-auto w-75" runat="server" id="postBox" align="right">
-         
+      <br />
+      <br />
+    <div class="row">
+    <asp:Button ID="comment" runat="server"  CssClass="btn btn-primary float-right w-100" Text="تعليق" OnClick="comment_Click"/>
         </div>
-       
+
+        </div>  
+  </div>
+            <div class="card-body" runat="server" id="mainBox">
+
+            </div>
+    </form>    
+</div>
+             
                         
 
-        </form>
+        
 </asp:Content>

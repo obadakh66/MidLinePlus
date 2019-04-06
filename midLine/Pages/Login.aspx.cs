@@ -35,7 +35,7 @@ namespace midLine.Pages
             }
             else
             {
-                Response.Redirect("adminPage.aspx");
+                Response.Redirect("AdminHome.aspx");
             }
 
         }

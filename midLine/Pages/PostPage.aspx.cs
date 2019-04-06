@@ -7,20 +7,17 @@ using System.Web.UI.WebControls;
 
 namespace midLine.Pages
 {
-    public partial class community : System.Web.UI.Page
+    public partial class WebForm9 : System.Web.UI.Page
     {
-       public string hi = "مرحباااا";
-        midLineDBEntities db = new midLineDBEntities();
-        
-
         protected void Page_Load(object sender, EventArgs e)
         {
             midLineDBEntities db = new midLineDBEntities();
-            string Id =Session["user"].ToString();
+            string Id = Session["user"].ToString();
             int id;
-            int type=0;
-            if(Id!=null && Id != "")
-            { id= Convert.ToInt16(Id);
+            int type = 0;
+            if (Id != null && Id != "")
+            {
+                id = Convert.ToInt16(Id);
                 var user = db.Users.Where(x => x.Id == id).FirstOrDefault();
                 if (user.UserType == 1) { type = 1; }
                 if (user.UserType == 2) { type = 2; }
@@ -30,14 +27,14 @@ namespace midLine.Pages
             else
             { type = 5; }
             Functions.Functions functions = new Functions.Functions();
-            functions.RetrivePosts(postBox,type);
+            functions.RetrivePosts(mainBox, type);
         }
 
         protected void send_Click(object sender, EventArgs e)
         {
-            int id =Convert.ToInt16(Session["userId"].ToString());
+            int id = Convert.ToInt16(Session["user"].ToString());
             midLineDBEntities db = new midLineDBEntities();
-           
+
             Post newPost = new Post
             {
                 UserID = id,
@@ -53,6 +50,21 @@ namespace midLine.Pages
             }
             Response.Redirect("community.aspx");
         }
-       
+
+        protected void comment_Click(object sender, EventArgs e)
+        {
+            midLineDBEntities db = new midLineDBEntities();
+            Comment newComment = new Comment
+            {
+                PostID = Convert.ToInt16(postId.Text),
+                DR_ID = Convert.ToInt16(Session["user"].ToString()),
+                CommentText = commentText.Text,
+                CommentDate=DateTime.Now
+            };
+            db.Comments.Add(newComment);
+            db.SaveChanges();
+            Response.Redirect("PostPage.aspx");
+
+        }
     }
 }

@@ -141,7 +141,6 @@
       <DependentUpon>medLine.edmx</DependentUpon>
       <LastGenOutput>medLine.cs</LastGenOutput>
     </Content>
-    <Content Include="Pages\community.aspx" />
     <Content Include="Pages\contactus.aspx" />
     <Content Include="Pages\Dent Section.aspx" />
     <Content Include="Pages\drprofile.aspx" />
@@ -160,6 +159,11 @@
     <Content Include="Pages\AppRequest.aspx" />
     <Content Include="Pages\patientAppointments.aspx" />
     <Content Include="Pages\ReportPage.aspx" />
+    <Content Include="Pages\PostPage.aspx" />
+    <Content Include="Pages\Users.aspx" />
+    <Content Include="Pages\AdminHome.aspx" />
+    <Content Include="Pages\Reports.aspx" />
+    <Content Include="Pages\Posts.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -269,13 +273,6 @@
     </Compile>
     <Compile Include="Pages\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\community.aspx.cs">
-      <DependentUpon>community.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\community.aspx.designer.cs">
-      <DependentUpon>community.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\contactus.aspx.cs">
       <DependentUpon>contactus.aspx</DependentUpon>
@@ -409,6 +406,41 @@
     </Compile>
     <Compile Include="Pages\ReportPage.aspx.designer.cs">
       <DependentUpon>ReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PostPage.aspx.cs">
+      <DependentUpon>PostPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PostPage.aspx.designer.cs">
+      <DependentUpon>PostPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Posts.aspx.cs">
+      <DependentUpon>Posts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Posts.aspx.designer.cs">
+      <DependentUpon>Posts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Post.cs">
       <DependentUpon>medLine.tt</DependentUpon>

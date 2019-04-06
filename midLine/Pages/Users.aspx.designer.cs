@@ -10,69 +10,78 @@
 namespace midLine.Pages {
     
     
-    public partial class Admin {
+    public partial class WebForm10 {
         
         /// <summary>
-        /// head control.
+        /// mainContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mainContent;
         
         /// <summary>
-        /// form1 control.
+        /// con control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl con;
         
         /// <summary>
-        /// items_count control.
+        /// modal_body control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl items_count;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl modal_body;
         
         /// <summary>
-        /// comments_count control.
+        /// modalImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl comments_count;
+        protected global::System.Web.UI.WebControls.Image modalImage;
         
         /// <summary>
-        /// users_count control.
+        /// close control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl users_count;
+        protected global::System.Web.UI.WebControls.Button close;
         
         /// <summary>
-        /// swaps_count control.
+        /// doctorsTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl swaps_count;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl doctorsTable;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// nursesTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nursesTable;
+        
+        /// <summary>
+        /// patients control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl patients;
     }
 }

@@ -10,7 +10,7 @@
 namespace midLine.Pages {
     
     
-    public partial class community {
+    public partial class WebForm9 {
         
         /// <summary>
         /// successAlert control.
@@ -49,12 +49,39 @@ namespace midLine.Pages {
         protected global::System.Web.UI.WebControls.Button send;
         
         /// <summary>
-        /// postBox control.
+        /// postId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl postBox;
+        protected global::System.Web.UI.WebControls.TextBox postId;
+        
+        /// <summary>
+        /// commentText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox commentText;
+        
+        /// <summary>
+        /// comment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button comment;
+        
+        /// <summary>
+        /// mainBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mainBox;
     }
 }
