@@ -71,7 +71,7 @@ body {
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-shopping-bag color-blue"></em>
 							<div class="large" id="items_count" runat="server"></div>
-							<div class="text-muted"># Of Appointments</div>
+							<div class="text-muted" id="AppCount" runat="server"></div>
 						</div>
 					</div>
 				</div>
@@ -79,7 +79,7 @@ body {
 					<div class="panel panel-blue panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-comments color-orange"></em>
 							<div class="large" id="comments_count" runat="server"></div>
-							<div class="text-muted"># Of Reports</div>
+							<div class="text-muted" id="ReportsCount" runat="server"></div>
 						</div>
 					</div>
 				</div>
@@ -87,7 +87,7 @@ body {
 					<div class="panel panel-orange panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
 							<div class="large" id="users_count" runat="server"></div>
-							<div class="text-muted"># Of Users</div>
+							<div class="text-muted" id="UsersCount" runat="server"></div>
 						</div>
 					</div>
 				</div>
@@ -95,7 +95,7 @@ body {
 					<div class="panel panel-red panel-widget ">
 						<div class="row no-padding"><em class="fa fa-xl fa-refresh color-red"></em>
 							<div class="large" id="swaps_count" runat="server"></div>
-							<div class="text-muted"># Of Posts</div>
+							<div class="text-muted" id="PostCount" runat="server"></div>
 						</div>
 					</div>
 				</div>

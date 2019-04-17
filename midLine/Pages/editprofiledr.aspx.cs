@@ -54,6 +54,7 @@ namespace midLine.Pages
                 currentUser.ProfilePhoto = bytes;
             }
             db.SaveChanges();
+            successAlert.Attributes.Remove("hidden");
         }
     
     }

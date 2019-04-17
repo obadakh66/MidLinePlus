@@ -14,11 +14,11 @@ namespace midLine.Pages
         protected void Page_Load(object sender, EventArgs e)
         {         
             
-                string username = Session["USERID"].ToString();
+                string username = Session["doctorid"].ToString();
                 int rankingUp = 0;
                 int rankingDown = 0;
                 var currentUser = db.Users.Where(x => x.Username == username).FirstOrDefault();
-            int id = currentUser.Id;
+                  int id = currentUser.Id;
             doctorName.InnerText += currentUser.FullName;
                 FullName.InnerText = currentUser.FullName;
                 Major.InnerText = currentUser.Major;
@@ -50,11 +50,13 @@ namespace midLine.Pages
         protected void rate_Click(object sender, EventArgs e)
         {
             int rateCount = 0;
-            int ratedForID = Convert.ToInt16(Session["doctorid"].ToString());
+            string ratedFor = Session["doctorid"].ToString();
             int ratedID = Convert.ToInt16(Session["user"].ToString());
+            var useer = db.Users.Where(x => x.Username == ratedFor).FirstOrDefault();
+            int ratedForID = useer.Id;
             foreach (var rate in db.Ratings)
             {
-                if (rate.RatedUser == ratedID && rate.RatedForUser == ratedForID)
+                if (rate.RatedUser == ratedID && rate.User1.Username == ratedFor)
                 {
                     rateCount = 1;
                 }

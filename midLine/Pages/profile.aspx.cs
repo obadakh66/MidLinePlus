@@ -13,12 +13,13 @@ namespace midLine.Pages
         midLineDBEntities db = new midLineDBEntities();
         protected void Page_Load(object sender, EventArgs e)
         {            
-            int id = Convert.ToInt16(Session["user"].ToString());
+            int id = Convert.ToInt16(Session["USERID"].ToString());
             int rankingUp=0;
             int rankingDown = 0;
             var currentUser = db.Users.Where(x => x.Id == id).FirstOrDefault();
             username.InnerText = currentUser.Username;
             fullName.InnerText = currentUser.FullName;
+            nameOfPatient.InnerText = currentUser.FullName;
             Mobile.InnerText = currentUser.MobileNumber;
             city.InnerText = currentUser.City;
             
@@ -80,6 +81,7 @@ namespace midLine.Pages
                 };
                 db.Ratings.Add(newRate);
                 db.SaveChanges();
+                Response.Redirect("profile.aspx");
             }
 
         }

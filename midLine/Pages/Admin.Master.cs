@@ -11,7 +11,11 @@ namespace midLine.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            midLineDBEntities db = new midLineDBEntities();
+            AppCount.InnerText = "# Of Appointments : " + db.AppointmentRequests.Count().ToString();
+            ReportsCount.InnerText = "# Of Reports : " + db.Reports.Count().ToString();
+            UsersCount.InnerText = "# Of Users : " + db.Users.Count().ToString();
+            PostCount.InnerText = "# Of Posts : " + db.Posts.Count().ToString();
         }
     }
 }

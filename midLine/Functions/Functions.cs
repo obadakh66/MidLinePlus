@@ -134,7 +134,7 @@ namespace midLine.Functions
                     /* img code */
                     img_div1 = new HtmlGenericControl("img");
                     img_div1.Attributes["class"] = "rounded-circle ml-2";
-                    img_div1.Attributes["src"] = "../1.png";
+                    img_div1.Attributes["src"] = image_retrive(request.DoctorID);
                     img_div1.Attributes["width"] = "40";
                     img_div1.Attributes["height"] = "40";
                     /*---------------------------------*/
@@ -354,7 +354,7 @@ namespace midLine.Functions
                     /* img code */
                     img_div1 = new HtmlGenericControl("img");
                     img_div1.Attributes["class"] = "rounded-circle ml-2";
-                    img_div1.Attributes["src"] = "../1.png";
+                    img_div1.Attributes["src"] = image_retrive(request.PatientID);
                     img_div1.Attributes["width"] = "40";
                     img_div1.Attributes["height"] = "40";
                     /*---------------------------------*/
@@ -417,6 +417,7 @@ namespace midLine.Functions
             var request = db.AppointmentRequests.Where(x => x.ID == requestId).FirstOrDefault();
             request.isAccepted = true;
             db.SaveChanges();
+            HttpContext.Current.Response.Redirect("drAppointments.aspx");
             
         }
         protected void reject_btn_Click(object sender, EventArgs e,int requestId)
@@ -425,6 +426,7 @@ namespace midLine.Functions
             var request = db.AppointmentRequests.Where(x => x.ID == requestId).FirstOrDefault();
             request.isAccepted = !true;
             db.SaveChanges();
+            HttpContext.Current.Response.Redirect("drAppointments.aspx");لا
         }
         protected void LinkedProfile_Click(object sender, EventArgs e)
         {
@@ -580,7 +582,7 @@ namespace midLine.Functions
 
             Session["USERID"] = ID;
             var doctor = db.Users.Where(x => x.Username == ID).FirstOrDefault();
-            Session["doctorid"] = doctor.Id;
+            Session["doctorid"] = doctor.Username;
             HttpContext.Current.Response.Redirect("drprofile.aspx");
 
         }
@@ -923,6 +925,7 @@ namespace midLine.Functions
             var userss = review.FirstOrDefault();
             userss.isActive = true;
             db.SaveChanges();
+            HttpContext.Current.Response.Redirect("Users.aspx");
         }
         public string certificate_retrive(Image modal, int userid)
         {
@@ -1016,7 +1019,7 @@ namespace midLine.Functions
                     row_n.Controls.Add(fullname);
                     row_n.Controls.Add(username);
                     row_n.Controls.Add(address);
-                 
+                    tbody.Controls.Add(row_n);
                     main_table.Controls.Add(tbody);
                 }
             }
@@ -1203,6 +1206,7 @@ namespace midLine.Functions
             db.Posts.Remove(post);
 
             db.SaveChanges();
+            HttpContext.Current.Response.Redirect("Posts.aspx");
 
 
         }

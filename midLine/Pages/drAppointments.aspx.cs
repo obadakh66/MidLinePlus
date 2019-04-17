@@ -11,7 +11,7 @@ namespace midLine.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id =Convert.ToInt16(Session["userId"].ToString());
+            int id =Convert.ToInt16(Session["user"].ToString());
             Functions.Functions fun = new Functions.Functions();
             fun.RetriveAppointments(id, appContainer);
         }

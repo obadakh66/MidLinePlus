@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="DrsHome.aspx.cs" Inherits="midLine.Pages.WebForm6" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+   
        <br />
     <div class="mr-0" align="right">
       <div class="row">
@@ -27,19 +29,20 @@
               <div class="card p-3 align-content-center col" style="width: 30rem;" id="DrForm" runat="server" hidden="hidden">
                    <h3 class="card-title">يرجى اكمال معلوماتك</h3>
               <form runat="server">
-                         <div class="form-group">
+            <div class="form-group">
               <label for="exampleInputEmail1">ارفاق الشهاده المعتمده</label>
-             <asp:FileUpload ID="imgUploader" runat="server" text="تحميل" />
+             <asp:FileUpload ID="imgUploader" runat="server" text="تحميل" required="required"/>
    
              </div>
+                
             <div class="form-group">
               <label for="exampleInputEmail1">سعر الكشفية</label>
-              <Asp:TextBox runat="server" ID="price"  class="form-control" placeholder="يرجى ادخال سعر الكشفية"/>
+              <Asp:TextBox runat="server" ID="price"  class="form-control" placeholder="يرجى ادخال سعر الكشفية" required="required"/>
    
              </div>
           <div class="form-group">
               <label for="exampleInputEmail1">يرجى اختيار القسم</label>
-             <asp:DropDownList ID="Departments" CssClass="form-control" runat="server">
+             <asp:DropDownList ID="Departments" CssClass="form-control" runat="server" required="required">
                  <asp:ListItem>قسم القلب</asp:ListItem>
                  <asp:ListItem>قسم العظام</asp:ListItem>
                   <asp:ListItem>قسم الأسنان</asp:ListItem>
@@ -50,20 +53,20 @@
               </div>
                      <div class="form-group">
               <label for="exampleInputEmail1">التخصص</label>
-              <Asp:TextBox runat="server" ID="specilized"   class="form-control" placeholder="يرجى كتابه التخصص"/>
+              <Asp:TextBox runat="server" ID="specilized"   class="form-control" placeholder="يرجى كتابه التخصص" required="required"/>
    
              </div>
 
                     <div class="form-group">
               <label for="exampleInputEmail1">المواعيد المتاحة</label>
-              <Asp:TextBox runat="server" ID="availableTime"  class="form-control" placeholder="يرجى ادخال المواعيد المتاحة"/>
-   
+              <Asp:TextBox runat="server" ID="availableTime"  class="form-control" placeholder="يرجى ادخال المواعيد المتاحة" required="required"/>
              </div>
                    <div class="form-group">
               <label for="exampleInputEmail1">العنوان</label>
-              <Asp:TextBox runat="server" ID="Address"   class="form-control" placeholder="يرجى ادخال المواعيد المتاحة"/>
+              <Asp:TextBox runat="server" ID="Address"   class="form-control" placeholder="يرجى ادخال العنوان بالتفصيل" required="required"/>
    
              </div>
+                 
            <Asp:Button runat="server" ID="update_btn"  class="btn btn-primary" OnClick="update_btn_Click" Text="تحديث"/>
 </form>
           

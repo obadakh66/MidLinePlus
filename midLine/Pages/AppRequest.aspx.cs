@@ -33,9 +33,9 @@ namespace midLine.Pages
             midLineDBEntities db = new midLineDBEntities();
             AppointmentRequest appointment = new AppointmentRequest
             {
-                DoctorID=doctorID,
-                PatientID=PatientID,
-                Time=time.Text
+                DoctorID = doctorID,
+                PatientID = PatientID,
+                Time = txtDate.Text+"  "+TimeSelector1.Hour.ToString() +":"+ TimeSelector1.Minute.ToString() +" "+ TimeSelector1.AmPm.ToString()
             };
             if (appointment != null)
             {
@@ -44,5 +44,6 @@ namespace midLine.Pages
                 successAlert.Attributes.Remove("hidden");
             }
         }
+       
     }
 }

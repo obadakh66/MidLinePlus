@@ -41,12 +41,10 @@
                     <div class="col-md-6">
                        
                         <div class="profile-head">
-                                    <h5>
-                                        Kshiti Ghelani
+                                    <h5 id="nameOfPatient" runat="server">
+                                        
                                     </h5>
-                                    <h6>
-                                        Web Developer and Designer
-                                    </h6>
+                                  
                                     <p class="proile-rating">: عدد التقييمات المرتفعة  <span id="ratesUp" runat="server"></span></p>
                                     <p class="proile-rating">: عدد التقييمات المنخفضة  <span id="ratesDown" runat="server"></span></p>
 

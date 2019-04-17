@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
  <br />
     <form runat="server">
+           <div runat="server" id="successAlert" class="alert alert-success " role="alert" hidden="hidden">
+               تم تعديل بياناتك بنجاح
+             </div>
     <asp:FileUpload ID="imgUploader" runat="server" class="float rigth" />
       
                   
