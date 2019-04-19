@@ -15,7 +15,7 @@ namespace midLine.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             doctorID =Convert.ToInt16(Session["doctorId"].ToString());
-            PatientID = Convert.ToInt16(Session["userId"].ToString());
+            PatientID = Convert.ToInt16(Session["user"].ToString());
 
             midLineDBEntities db = new midLineDBEntities();
             var doctor = db.Users.Where(x => x.Id == doctorID).FirstOrDefault();

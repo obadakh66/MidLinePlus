@@ -14,7 +14,7 @@ namespace midLine.Pages
         protected void Page_Load(object sender, EventArgs e)
         {         
             
-                string username = Session["USERID"].ToString();
+                string username = Session["USER"].ToString();
                 int rankingUp = 0;
                 int rankingDown = 0;
                 var currentUser = db.Users.Where(x => x.Username == username).FirstOrDefault();

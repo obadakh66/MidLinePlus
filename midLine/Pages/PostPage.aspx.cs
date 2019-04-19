@@ -48,7 +48,7 @@ namespace midLine.Pages
                 db.Posts.Add(newPost);
                 db.SaveChanges();
             }
-            Response.Redirect("community.aspx");
+            Response.Redirect("PostPage.aspx");
         }
 
         protected void comment_Click(object sender, EventArgs e)

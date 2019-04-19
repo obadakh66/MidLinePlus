@@ -2,28 +2,38 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    
+          <form runat="server">
 
+<div class="card-center bg-light" >
+  
+  <div class="card-body mx-auto w-75">
+   <center> <h1 class="card-title">للتواصل والاقتراحات</h1></center>
+
+      <div class="card-group">
+          <label>البريد الالكتروني</label>
+          <asp:TextBox ID="email" runat="server" CssClass="float-right form-control" placeholder="ادخل البريد الالكتروني"></asp:TextBox>
+      </div>
       <br />
-    <div class="mr-0" align="right">
-      <div class="row">
-        
-         <br /><br />
-        
-              <div class="col col-sm-2 mr-0" >
-          <div class="list-group" >
-            <a href="homepage.aspx" class="list-group-item active">شخصي</a>
-            <a href="#" class="list-group-item">المواعيد</a>
-            <a href="edit profile.aspx" class="list-group-item">تعديل الملف الشخصي</a>
-             
-              <a href="homepage.aspx" class="list-group-item active">الاقسام</a>
-            <a href="orthopedic section.aspx" class="list-group-item">قسم العظام</a>
-            <a href="heart section.aspx" class="list-group-item">قسم القلب</a>
-            <a href="dent section.aspx" class="list-group-item">قسم الأسنان</a>
-            <a href="pediatrics section.aspx" class="list-group-item">قسم الاطفال</a>
-            <a href="other section.aspx" class="list-group-item">اقسام اخرى</a>
-                  <a href="nursing section.aspx" class="list-group-item">قسم التمريض المنزلي</a>
-            
-          </div>
-        </div><!--/.sidebar-offcanvas-->
+
+      <div class="card-group">
+          <label>الموضوع</label>
+          <asp:TextBox ID="TextBox1" runat="server" CssClass="float-right form-control" placeholder="ادخل اسم الموضوع"></asp:TextBox>
+      </div>
+      <br />
+
+      <div class="card-group">
+          <label>الرساله</label>
+          <textarea id="mesg" runat="server" class="form-control" rows="4" palceholder="ادخل محتوى الرساله"></textarea>
+
+      </div>
+
+   <br />
+   <br />
+    <asp:Button ID="send" runat="server" Text="ارسال" class="btn btn-primary"></asp:Button>
+  </div>
+</div>
+
+
+          
+              </form>
         </asp:content>
