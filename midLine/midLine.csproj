@@ -94,8 +94,8 @@
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
-    <Reference Include="TimePicker">
-      <HintPath>E:\Downloads\TimePicker.dll</HintPath>
+    <Reference Include="TimePicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d25e9f59e49c4d2f, processorArchitecture=MSIL">
+      <HintPath>..\packages\TimePickerMKB.1.0.0.1\lib\TimePicker.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>

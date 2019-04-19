@@ -426,7 +426,7 @@ namespace midLine.Functions
             var request = db.AppointmentRequests.Where(x => x.ID == requestId).FirstOrDefault();
             request.isAccepted = !true;
             db.SaveChanges();
-            HttpContext.Current.Response.Redirect("drAppointments.aspx");لا
+            HttpContext.Current.Response.Redirect("drAppointments.aspx");
         }
         protected void LinkedProfile_Click(object sender, EventArgs e)
         {
@@ -695,7 +695,8 @@ namespace midLine.Functions
             Session["doctorId"] = button.ID;
             midLineDBEntities db = new midLineDBEntities();
             int patientid = Convert.ToInt16(Session["user"].ToString());
-            var count = db.AppointmentRequests.Where(x => x.PatientID == patientid).FirstOrDefault();
+            int doctorId = Convert.ToInt16(Session["doctorId"].ToString());
+            var count = db.AppointmentRequests.Where(x => x.PatientID == patientid&&x.DoctorID==doctorId).FirstOrDefault();
             if (count == null)
             {
                 HttpContext.Current.Response.Redirect("AppRequest.aspx");
@@ -869,8 +870,10 @@ namespace midLine.Functions
                     activate.ID = doctor.Username;
                     activate.Text = "Activate";
                     activate.Click += delegate (object sender, EventArgs e) { Activate_btn_Click(sender, e); };
-
-                    check2.Controls.Add(activate);
+                    if (doctor.isActive != false)
+                    {
+                        check2.Controls.Add(activate);
+                    }
                     certificate.Controls.Add(openCertificate);
 
                     fullname.Attributes.Add("scope", "col");

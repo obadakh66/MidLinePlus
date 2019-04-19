@@ -40,7 +40,14 @@ namespace midLine.Pages
 
                 if (newUser != null && !newUser.Username.Contains(" "))
                 {
-
+                    if(newUser.UserType==1 || newUser.UserType == 2)
+                    {
+                        newUser.isActive = false;
+                    }
+                    else
+                    {
+                        newUser.isActive = true;
+                    }
                     db.Users.Add(newUser);
                     db.SaveChanges();
                     successAlert.Attributes.Remove("hidden");

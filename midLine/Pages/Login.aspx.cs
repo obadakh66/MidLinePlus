@@ -25,9 +25,10 @@ namespace midLine.Pages
                     Password = pass.Text
                 };
 
-
+                midLineDBEntities db = new midLineDBEntities();
+                var currentUser = db.Users.Where(x => x.Username == username.Text).FirstOrDefault();
                 Functions.Functions login_fun = new Functions.Functions();
-                if (login_fun.login(myUser) == 1 || login_fun.login(myUser) == 2)
+                if ((login_fun.login(myUser) == 1 || login_fun.login(myUser) == 2) &&(currentUser.isActive==true))
                 {
                     Response.Redirect("DrsHome.aspx");
                 }
