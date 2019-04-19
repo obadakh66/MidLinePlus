@@ -40,6 +40,15 @@ namespace midLine.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl items_count;
         
         /// <summary>
+        /// AppCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AppCount;
+        
+        /// <summary>
         /// comments_count control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace midLine.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl comments_count;
+        
+        /// <summary>
+        /// ReportsCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ReportsCount;
         
         /// <summary>
         /// users_count control.
@@ -58,6 +76,15 @@ namespace midLine.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl users_count;
         
         /// <summary>
+        /// UsersCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl UsersCount;
+        
+        /// <summary>
         /// swaps_count control.
         /// </summary>
         /// <remarks>
@@ -65,6 +92,15 @@ namespace midLine.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl swaps_count;
+        
+        /// <summary>
+        /// PostCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PostCount;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

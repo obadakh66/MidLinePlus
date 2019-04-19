@@ -5,7 +5,7 @@
           <%-- ------------------------------------------ --%>
            <div runat="server" class="alert  alert-success alert-dismissible fade show" role="alert" hidden="hidden"   id="report_alert" aria-disabled="True"> 
     
-              <strong>Success!</strong> Your Report has been sent successfully , Thank You .
+               تم ارسال الابلاغ بنجاح , شكرا لك 
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
               </button>

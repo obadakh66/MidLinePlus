@@ -1,7 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="midLine.Pages.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+   
         <div class="card bg-light">
 				<div class="card-body mx-auto w-50">
+                     <div runat="server" id="errorRequired" class="alert alert-danger w-75" role="alert" hidden="hidden">
+                 يرجى ادخال اسم المستخدم وكلمة المرور
+             </div>
+                     <div runat="server" id="errorValid" class="alert alert-danger w-75" role="alert" hidden="hidden">
+                اسم المستخدم او كلمة المرور خاطئة
+             </div>
 					 <div class="logo mb-3">
 						 <div class="col-md-12 text-center">
 							<h1>تسجيل الدخول</h1>
@@ -10,11 +17,11 @@
                    <form runat="server">
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">اسم المستخدم</label>
-                              <Asp:TextBox runat="server" ID="username" class="form-control float-right"  aria-describedby="emailHelp" placeholder="ادخل اسم المستخدم "/>
+                              <Asp:TextBox runat="server" ID="username" class="form-control float-right"  aria-describedby="emailHelp" placeholder="ادخل اسم المستخدم " required="required"/>
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رمز الدخول</label>
-                              <Asp:TextBox type="password" runat="server" ID="pass"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز"/>
+                              <Asp:TextBox type="password" runat="server" ID="pass"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز" required="required"/>
                            </div>
                            <div class="form-group">
                               <p class="text-center"> <a href="#"></a></p>
@@ -39,6 +46,7 @@
                            <div class="form-group">
                               <p class="text-center">لا يوجد لديك حساب؟ <a href="reg.aspx" id="signup">تسجيل </a></p>
                            </div>
+
                         </form>
                  
 				</div>

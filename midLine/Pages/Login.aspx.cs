@@ -16,26 +16,37 @@ namespace midLine.Pages
 
         protected void Login_Click(object sender, EventArgs e)
         {
-            var myUser = new User
+            if (username.Text != "" && username.Text != null)
             {
-                Username = username.Text,
+                var myUser = new User
+                {
+                    Username = username.Text,
 
-                Password = pass.Text
-            };
+                    Password = pass.Text
+                };
 
 
-            Functions.Functions login_fun = new Functions.Functions();
-            if (login_fun.login(myUser) == 1|| login_fun.login(myUser) == 2)
-            {
-                Response.Redirect("DrsHome.aspx");
-            }
-            else if (login_fun.login(myUser) == 3)
-            {
-                Response.Redirect("homePage.aspx");
+                Functions.Functions login_fun = new Functions.Functions();
+                if (login_fun.login(myUser) == 1 || login_fun.login(myUser) == 2)
+                {
+                    Response.Redirect("DrsHome.aspx");
+                }
+                else if (login_fun.login(myUser) == 3)
+                {
+                    Response.Redirect("homePage.aspx");
+                }
+                else if (login_fun.login(myUser) == 4)
+                {
+                    Response.Redirect("AdminHome.aspx");
+                }
+                else
+                {
+                    errorValid.Attributes.Remove("hidden");
+                }
             }
             else
             {
-                Response.Redirect("AdminHome.aspx");
+                errorRequired.Attributes.Remove("hidden");
             }
 
         }

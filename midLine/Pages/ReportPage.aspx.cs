@@ -27,7 +27,7 @@ namespace midLine.Pages
             };
             db.Reports.Add(newReport);
             db.SaveChanges();
-            Response.Redirect("profile.aspx");
+            report_alert.Attributes.Remove("hidden");
         }
     }
 }

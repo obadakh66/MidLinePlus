@@ -23,19 +23,19 @@
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">الاسم الكامل</label>
-                              <Asp:TextBox runat="server" ID="FullName"   class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم من ثلاثه مقاطع"/>
+                              <Asp:TextBox runat="server" ID="FullName"   class="form-control" aria-describedby="emailHelp" placeholder="ادخل الاسم من ثلاثه مقاطع" required="required"/>
                            </div>
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رقم الهاتف</label>
-                              <Asp:TextBox runat="server" ID="MobileNumber"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل رقم الهاتف"/>
+                              <Asp:TextBox runat="server" ID="MobileNumber"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل رقم الهاتف" required="required"/>
                            </div>
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">رمز السري</label>
-                              <Asp:TextBox runat="server" ID="Password" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
+                              <Asp:TextBox runat="server" ID="Password" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري" required="required"/>
                            </div>
                          <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">اعد كتابة</label>
-                              <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" data-match="#pass" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
+                              <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" data-match="#pass" aria-describedby="emailHelp" placeholder="ادخل الرمز السري" required="required"/>
                            </div>
                        <asp:CompareValidator ID="CompareValidator1" runat="server" 
                              ControlToCompare="Password" ControlToValidate="ReEnterPass" ErrorMessage="كلمات المرور غير متطابقة" ForeColor="#29436D"></asp:CompareValidator>
