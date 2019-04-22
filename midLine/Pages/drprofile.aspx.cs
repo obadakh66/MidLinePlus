@@ -19,7 +19,7 @@ namespace midLine.Pages
                 int rankingDown = 0;
                 var currentUser = db.Users.Where(x => x.Username == username).FirstOrDefault();
                   int id = currentUser.Id;
-            doctorName.InnerText += currentUser.FullName;
+            doctorName.InnerText = currentUser.FullName;
                 FullName.InnerText = currentUser.FullName;
                 Major.InnerText = currentUser.Major;
                 City.InnerText = currentUser.City +"-"+currentUser.Address;

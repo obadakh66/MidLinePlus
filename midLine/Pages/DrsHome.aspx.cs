@@ -16,10 +16,34 @@ namespace midLine.Pages
             string DR_ID = Session["userID"].ToString();
             int Dr_ID = Convert.ToInt16(DR_ID);
             var db = new midLineDBEntities();
+            var appCount = db.AppointmentRequests.Where(x => x.DoctorID == Dr_ID).Count();
+            var ratingCount = db.Ratings.Where(x => x.RatedForUser == Dr_ID).Count();
+            int ratingSum = 0;
+            foreach (var rate in db.Ratings)
+            {
+                if (rate.RatedForUser == Dr_ID)
+                {
+                    ratingSum += rate.RateValue;
+                }
+            }
+            if (ratingCount != 0)
+            {
+                int ratingAVg = ratingSum / ratingCount;
+                ratingAvg.InnerText += "5/"+ratingAVg.ToString();
+            }
+            var pendingRequests = db.AppointmentRequests.Where(x => x.DoctorID == Dr_ID && x.isAccepted == null).Count();
+            appcount.InnerText += appCount.ToString();
+            
+            PendingRequests.InnerText += pendingRequests.ToString();
             var doctor = db.Users.Where(x => x.Id == Dr_ID).FirstOrDefault();
             if (doctor.Price == null)
             {
                 DrForm.Attributes.Remove("hidden");
+            }
+            else
+            {
+                InfoForm.Attributes.Remove("hidden");
+
             }
         }
 

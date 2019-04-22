@@ -11,7 +11,15 @@ namespace midLine
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["LoggedIn"] != null)
+            {
+                logout.Attributes.Remove("hidden");
+                community.Attributes.Remove("hidden");
+            }
+            else
+            {
+                login.Attributes.Remove("hidden");
+            }
         }
     }
 }

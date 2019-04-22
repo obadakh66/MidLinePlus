@@ -21,13 +21,10 @@
                               <Asp:TextBox runat="server" ID="MobileNumber"  class="form-control" />
                            </div>
                         <div class="form-group">
-                              <label for="exampleInputEmail1" class="float-right">الرمز السري الحالي</label>
+                              <label for="exampleInputEmail1" class="float-right">ادخل كلمة المرور الجديدة</label>
                               <Asp:TextBox runat="server" ID="Password" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
                            </div>
-                         <div class="form-group">
-                              <label for="exampleInputEmail1" class="float-right"> الرمز السري الجديد</label>
-                              <Asp:TextBox runat="server" ID="ReEnterPass" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
-                           </div>
+                       
         <asp:Button ID="save" runat="server" Text="حفظ" class="btn btn-primary tx-tfm" OnClick="save_Click" />
         
 

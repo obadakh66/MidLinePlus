@@ -19,8 +19,17 @@ namespace midLine.Pages
             {
                 id = Convert.ToInt16(Id);
                 var user = db.Users.Where(x => x.Id == id).FirstOrDefault();
-                if (user.UserType == 1) { type = 1; }
-                if (user.UserType == 2) { type = 2; }
+                if (user.UserType == 1)
+                {
+                    type = 1;
+                    commentBox.Attributes.Remove("hidden");
+                }
+                if (user.UserType == 2)
+                {
+                    type = 2;
+                    commentBox.Attributes.Remove("hidden");
+
+                }
                 if (user.UserType == 3) { type = 3; }
                 if (user.UserType == 4) { type = 4; }
             }

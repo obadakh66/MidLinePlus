@@ -32,11 +32,11 @@ namespace midLine.Pages
             Session["reportedUser"] = currentUser.Id;
             foreach (var rate in db.Ratings)
             {
-                if (rate.RatedForUser == id && rate.RateValue>=2)
+                if (rate.RatedForUser == id && rate.RateValue>2)
                 {
                     rankingUp += 1;
                 }
-                if (rate.RatedForUser == id && rate.RateValue < 2)
+                if (rate.RatedForUser == id && rate.RateValue <= 2)
                 {
                     rankingDown += 1;
                 }
@@ -59,7 +59,7 @@ namespace midLine.Pages
         {
             int rateCount=0;
             int ratedForID = Convert.ToInt16(Session["USERID"].ToString());
-            int ratedID = Convert.ToInt16(Session["userId"].ToString());
+            int ratedID = Convert.ToInt16(Session["user"].ToString());
             foreach(var rate in db.Ratings)
             {
                 if(rate.RatedUser==ratedID && rate.RatedForUser == ratedForID)

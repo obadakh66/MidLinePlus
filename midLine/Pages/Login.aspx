@@ -6,6 +6,9 @@
                      <div runat="server" id="errorRequired" class="alert alert-danger w-75" role="alert" hidden="hidden">
                  يرجى ادخال اسم المستخدم وكلمة المرور
              </div>
+                     <div runat="server" id="inActiveError" class="alert alert-danger w-75" role="alert" hidden="hidden">
+                 يرجى الانتظار لتفعيل الحساب , هذه العملية تأخذ بضع دقائق
+             </div>
                      <div runat="server" id="errorValid" class="alert alert-danger w-75" role="alert" hidden="hidden">
                 اسم المستخدم او كلمة المرور خاطئة
              </div>

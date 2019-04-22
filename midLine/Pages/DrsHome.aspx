@@ -25,7 +25,7 @@
             
           <div class="row container p-3 align-content-center" runat="server" id="updateForm">
             
-            <div class="col-4"></div>
+           
               <div class="card p-3 align-content-center col" style="width: 30rem;" id="DrForm" runat="server" hidden="hidden">
                    <h3 class="card-title">يرجى اكمال معلوماتك</h3>
               <form runat="server">
@@ -71,7 +71,15 @@
 </form>
           
          </div>
-         <div class="col-4"></div>
+                <div class="card p-3 align-content-center col" style="width: 60rem;" id="InfoForm" runat="server" hidden="hidden">
+                   <h3 class="card-title" runat="server" id="appcount">
+                       عدد المواعيد :
+        </h3>
+                    <h3 class="card-title" runat="server" id="ratingAvg">معدل التقييمات : </h3>
+              <div runat="server" id="PendingRequests" class="alert alert-success w-75" role="alert">لديك مواعيد معلقة عدد :</div>
+          
+         </div>
+        
           </div><!--/row-->
      
         </div>

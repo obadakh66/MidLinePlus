@@ -29,7 +29,7 @@
     <asp:Button ID="send" runat="server"  CssClass="btn btn-primary float-right" Text="ارسال" OnClick="send_Click"/>
   </div>
             <br />
-             <div class="card p-5 w-50 row" style="margin-right:300px">
+             <div class="card p-5 w-50 row" style="margin-right:300px" id="commentBox" runat="server" hidden="hidden">
                  <div >
       <h5 class="text-center">اضف تعليق </h5>
       <br />

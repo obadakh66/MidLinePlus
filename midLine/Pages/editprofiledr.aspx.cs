@@ -55,6 +55,7 @@ namespace midLine.Pages
             }
             db.SaveChanges();
             successAlert.Attributes.Remove("hidden");
+            Response.Redirect("DrsHome.aspx");
         }
     
     }

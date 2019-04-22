@@ -579,7 +579,6 @@ namespace midLine.Functions
             midLineDBEntities db = new midLineDBEntities();
             LinkButton button = (LinkButton)sender;
             string ID = button.ID;
-
             Session["USERID"] = ID;
             var doctor = db.Users.Where(x => x.Username == ID).FirstOrDefault();
             Session["doctorid"] = doctor.Username;
@@ -868,12 +867,19 @@ namespace midLine.Functions
                     activate.Attributes["class"] = "btn btn-secondary";
                    
                     activate.ID = doctor.Username;
-                    activate.Text = "Activate";
-                    activate.Click += delegate (object sender, EventArgs e) { Activate_btn_Click(sender, e); };
-                    if (doctor.isActive != false)
+                    if (doctor.isActive == true)
                     {
-                        check2.Controls.Add(activate);
+                        activate.Text = "Deactivate";
                     }
+                    else
+                    {
+                        activate.Text = "Activate";
+                    }
+                    
+                    activate.Click += delegate (object sender, EventArgs e) { Activate_btn_Click(sender, e); };
+                    
+                        check2.Controls.Add(activate);
+                   
                     certificate.Controls.Add(openCertificate);
 
                     fullname.Attributes.Add("scope", "col");
@@ -926,7 +932,7 @@ namespace midLine.Functions
             var review = from c in db.Users where c.Username == button.ID select c;
 
             var userss = review.FirstOrDefault();
-            userss.isActive = true;
+            userss.isActive = !userss.isActive;
             db.SaveChanges();
             HttpContext.Current.Response.Redirect("Users.aspx");
         }
