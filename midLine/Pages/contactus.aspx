@@ -17,7 +17,7 @@
 
       <div class="card-group">
           <label>الموضوع</label>
-          <asp:TextBox ID="TextBox1" runat="server" CssClass="float-right form-control" placeholder="ادخل اسم الموضوع"></asp:TextBox>
+          <asp:TextBox ID="subject" runat="server" CssClass="float-right form-control" placeholder="ادخل اسم الموضوع"></asp:TextBox>
       </div>
       <br />
 
@@ -29,7 +29,7 @@
 
    <br />
    <br />
-    <asp:Button ID="send" runat="server" Text="ارسال" class="btn btn-primary"></asp:Button>
+    <asp:Button ID="send" runat="server" Text="ارسال" class="btn btn-primary" OnClick="send_Click"/>
   </div>
 </div>
 

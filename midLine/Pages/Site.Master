@@ -23,20 +23,20 @@
       <a class="nav-link" href="#">الرئيسيه</a>
     </li>
     <li class="nav-item active" hidden="hidden" id="community" runat="server">
-      <a class="nav-link" href="#">تواصل مع الاطباء</a>
+      <a class="nav-link" href="PostPage.aspx">تواصل مع الاطباء</a>
     </li>
     <li class="nav-item active">
-      <a class="nav-link" href="#">اتصل بنا</a>
+      <a class="nav-link" href="contactus.aspx">اتصل بنا</a>
     </li>
     <li class="nav-item active">
       <a class="nav-link" href="#">نبذه عنا</a>
     </li>
      
     <li class="nav-item active" id="login" runat="server" hidden="hidden">
-      <a class="nav-link" href="#">الدخول</a>
+      <a class="nav-link" href="Login.aspx">الدخول</a>
     </li>
       <li class="nav-item active" id="logout" runat="server" hidden="hidden">
-          <a class="nav-link" href="#" type="hidden">تسجيل الخروج </a>
+          <a class="nav-link" href="Login.aspx" type="hidden" >تسجيل الخروج </a>
       </li>
   </ul>
 </nav>

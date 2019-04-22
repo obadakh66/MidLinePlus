@@ -13,5 +13,31 @@ namespace midLine.Pages
         {
 
         }
+
+        protected void send_Click(object sender, EventArgs e)
+        {
+            midLineDBEntities db = new midLineDBEntities();
+            var newMsg = new Message
+            {
+                userEmail = email.Text,
+                Subject = subject.Text,
+                Message1 = mesg.InnerText
+            };
+            db.Messages.Add(newMsg);
+            db.SaveChanges();
+            if (Session["LoggedIn"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if(Session["LoggedIn"].ToString() == "1")
+            {
+                Response.Redirect("DrsHome.aspx");
+            }
+            else
+            {
+                Response.Redirect("homePage.aspx");
+            }
+            
+        }
     }
 }

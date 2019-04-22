@@ -11,7 +11,7 @@ namespace midLine.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.Clear();
         }
 
         protected void Login_Click(object sender, EventArgs e)
@@ -30,13 +30,13 @@ namespace midLine.Pages
                 Functions.Functions login_fun = new Functions.Functions();
                 if ((login_fun.login(myUser) == 1 || login_fun.login(myUser) == 2) && (currentUser.isActive == true))
                 {
-                    Session["LoggedIn"] = "LoggedIn";
+                    Session["LoggedIn"] = 1;
                     Response.Redirect("DrsHome.aspx");
                     
                 }
                 else if (login_fun.login(myUser) == 3)
                 {
-                    Session["LoggedIn"] = "LoggedIn";
+                    Session["LoggedIn"] = 3;
                     Response.Redirect("homePage.aspx");
                 }
                 else if (login_fun.login(myUser) == 4)
