@@ -20,7 +20,8 @@
      <nav class="navbar navbar-expand-sm bg-primary navbar-dark w-100">
   <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="#">الرئيسيه</a>
+      <a class="nav-link" href="homePage.aspx" id="userHome" runat="server" hidden="hidden">الرئيسيه</a>
+      <a class="nav-link" href="DrsHome.aspx" id="drHome" runat="server" hidden="hidden">الرئيسيه</a>
     </li>
     <li class="nav-item active" hidden="hidden" id="community" runat="server">
       <a class="nav-link" href="PostPage.aspx">تواصل مع الاطباء</a>

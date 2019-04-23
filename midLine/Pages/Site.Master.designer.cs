@@ -13,6 +13,24 @@ namespace midLine {
     public partial class SiteMaster {
         
         /// <summary>
+        /// userHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor userHome;
+        
+        /// <summary>
+        /// drHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor drHome;
+        
+        /// <summary>
         /// community control.
         /// </summary>
         /// <remarks>

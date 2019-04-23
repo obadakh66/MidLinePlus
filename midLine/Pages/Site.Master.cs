@@ -13,6 +13,13 @@ namespace midLine
         {
             if (Session["LoggedIn"] != null)
             {
+                midLineDBEntities db = new midLineDBEntities();
+                int id = Convert.ToInt16(Session["user"].ToString());
+                var user = db.Users.Where(x => x.Id == id).FirstOrDefault();
+                if(user.UserType==1 || user.UserType == 2)
+                { drHome.Attributes.Remove("hidden"); }
+                if (user.UserType == 3)
+                { userHome.Attributes.Remove("hidden"); }
                 logout.Attributes.Remove("hidden");
                 community.Attributes.Remove("hidden");
             }

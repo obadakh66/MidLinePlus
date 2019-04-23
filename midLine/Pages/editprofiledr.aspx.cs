@@ -42,8 +42,8 @@ namespace midLine.Pages
             {
                 currentUser.Address = Address.Text;
             }
-
-            if (imgUploader.PostedFile != null)
+            string extension = Path.GetExtension(imgUploader.PostedFile.FileName);
+            if (imgUploader.PostedFile != null && (extension.ToLower() == ".jpg" || extension.ToLower() == ".png" || extension.ToLower() == ".gif"))
             {
 
                 byte[] bytes;
@@ -52,10 +52,15 @@ namespace midLine.Pages
                     bytes = br.ReadBytes(imgUploader.PostedFile.ContentLength);
                 }
                 currentUser.ProfilePhoto = bytes;
+                db.SaveChanges();
+                successAlert.Attributes.Remove("hidden");
+                Response.Redirect("DrsHome.aspx");
             }
-            db.SaveChanges();
-            successAlert.Attributes.Remove("hidden");
-            Response.Redirect("DrsHome.aspx");
+            else
+            {
+                fileError.Attributes.Remove("hidden");
+            }
+
         }
     
     }
