@@ -32,7 +32,7 @@
 
       <footer class="text-center fixed-bottom">
            <hr>
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; 2019 mid line plus, Inc.</p>
       </footer>
 
     </div><!--/.container-->

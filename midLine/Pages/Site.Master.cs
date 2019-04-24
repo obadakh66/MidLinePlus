@@ -22,6 +22,7 @@ namespace midLine
                 { userHome.Attributes.Remove("hidden"); }
                 logout.Attributes.Remove("hidden");
                 community.Attributes.Remove("hidden");
+            
             }
             else
             {

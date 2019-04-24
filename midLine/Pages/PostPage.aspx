@@ -61,6 +61,10 @@
 </div>
              
                         
-
+    
+      <footer class="text-center fixed-bottom">
+           <hr>
+        <p>&copy; 2019 mid line plus, Inc.</p>
+      </footer>
         
 </asp:Content>

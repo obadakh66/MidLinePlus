@@ -103,6 +103,14 @@
                         </form>
                  
 				</div>
+        <br />
+    <br />
+    <hr />
+              <footer class="text-center">
+        <p>&copy; 2019 mid line plus, Inc.</p>
+      </footer>
+			</div>
+    
 			</div>
      
 </asp:Content>

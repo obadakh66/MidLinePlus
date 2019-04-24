@@ -12,9 +12,15 @@
                      <div runat="server" id="errorValid" class="alert alert-danger w-75" role="alert" hidden="hidden">
                 اسم المستخدم او كلمة المرور خاطئة
              </div>
+                    <div>
+
+                        <div class="preview text-center">
+                <img class="preview-img"  src="../mid.gif"  alt="Preview Image" width="200" height="200"/>
+                    </div>
 					 <div class="logo mb-3">
 						 <div class="col-md-12 text-center">
 							<h1>تسجيل الدخول</h1>
+                         
 						 </div>
 					</div>
                    <form runat="server">
@@ -53,6 +59,19 @@
                         </form>
                  
 				</div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+                    <hr />
+      
+              <footer class="text-center  ">
+        <p>&copy; 2019 mid line plus, Inc.</p>
+      </footer>
 			</div>
+    
+  
+
      
 </asp:Content>

@@ -9,15 +9,15 @@
         
               <div class="col col-sm-2 mr-0" >
           <div class="list-group" >
-            <a href="#" class="list-group-item active">شخصي</a>
+            <a href="homePage.aspx" class="list-group-item active white">شخصي</a>
             <a href="patientAppointments.aspx" class="list-group-item">المواعيد</a>
-            <a href="#" class="list-group-item">تعديل الملف الشخصي</a>
+            <a href="edit profile.aspx" class="list-group-item">تعديل الملف الشخصي</a>
              
               <a href="homepage.aspx" class="list-group-item active">الاقسام</a>
             <a href="orthopedic section.aspx" class="list-group-item">قسم العظام</a>
             <a href="heart section.aspx" class="list-group-item">قسم القلب</a>
             <a href="dent section.aspx" class="list-group-item">قسم الأسنان</a>
-            <a href="pediatrics section.aspx" class="list-group-item">قسم الاطفال</a>
+            <a href="Pediatrics section.aspx" class="list-group-item">قسم الاطفال</a>
             <a href="other section.aspx" class="list-group-item">اقسام اخرى</a>
             <a href="nursing section.aspx" class="list-group-item">قسم التمريض المنزلي</a>
             
@@ -99,7 +99,7 @@
       <hr>
 
       <footer class="text-center">
-        <p>&copy; 2019 Company, Inc.</p>
+        <p>&copy; 2019 mid line plus, Inc.</p>
       </footer>
 
     </div><!--/.container-->

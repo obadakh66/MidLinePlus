@@ -36,10 +36,14 @@
         
       
     <div>
+        <br />
+        <br />
+        <br />
+        <br />
       <hr>
 
       <footer class="text-center">
-        <p>&copy; 2019 Company, Inc.</p>
+        <p>&copy; 2019 mid line plus, Inc.</p>
       </footer>
 
     </div><!--/.container-->

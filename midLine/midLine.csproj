@@ -147,6 +147,8 @@
       <DependentUpon>medLine.edmx</DependentUpon>
       <LastGenOutput>medLine.cs</LastGenOutput>
     </Content>
+    <Content Include="medlogo.PNG" />
+    <Content Include="mid.gif" />
     <Content Include="Pages\contactus.aspx" />
     <Content Include="Pages\Dent Section.aspx" />
     <Content Include="Pages\drprofile.aspx" />
