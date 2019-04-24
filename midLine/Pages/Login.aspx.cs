@@ -28,7 +28,7 @@ namespace midLine.Pages
                 midLineDBEntities db = new midLineDBEntities();
                 var currentUser = db.Users.Where(x => x.Username == username.Text).FirstOrDefault();
                 Functions.Functions login_fun = new Functions.Functions();
-                if ((login_fun.login(myUser) == 1 || login_fun.login(myUser) == 2) && (currentUser.isActive == true))
+                if (login_fun.login(myUser) == 1 || login_fun.login(myUser) == 2)
                 {
                     Session["LoggedIn"] = 1;
                     Response.Redirect("DrsHome.aspx");
@@ -46,14 +46,9 @@ namespace midLine.Pages
                 }
                 else
                 {
-                    if (currentUser.isActive == false)
-                    {
-                        inActiveError.Attributes.Remove("hidden");
-                    }
-                    else
-                    {
+                    
                         errorValid.Attributes.Remove("hidden");
-                    }
+                  
                 }
             }
             else

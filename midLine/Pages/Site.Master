@@ -33,11 +33,11 @@
       <a class="nav-link" href="#">نبذه عنا</a>
     </li>
      
-    <li class="nav-item active" id="login" runat="server" hidden="hidden">
-      <a class="nav-link" href="reg.aspx">تسجيل</a>
+    <li class="nav-item active" id="signup" runat="server" hidden="hidden">
+      <a class="nav-link" href="reg.aspx">التسجيل</a>
     </li>
-      <li class="nav-item active" id="sign up" >
-          <a class="nav-link" href="Login.aspx"></a>
+      <li class="nav-item active" id="login" runat="server" hidden="hidden" >
+          <a class="nav-link" href="Login.aspx">تسجيل الدخول</a>
       </li>
       <li class="nav-item active" id="logout" runat="server" hidden="hidden">
           <a class="nav-link" href="Login.aspx" type="hidden" >تسجيل الخروج </a>

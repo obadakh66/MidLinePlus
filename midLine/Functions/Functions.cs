@@ -360,8 +360,8 @@ namespace midLine.Functions
                     /*---------------------------------*/
                     /* link code */
                     link = new LinkButton();
-                    link.Text = "الدكتور " + request.User1.FullName;
-                    link.ID = request.User1.Username;
+                    link.Text = "الدكتور " + request.User.FullName;
+                    link.ID = request.User.Username;
                     link.Click += delegate (object sender, EventArgs e) { LinkedProfileDr_Click(sender, e); };
                     /*---------------------------------*/
                     /* h52 code */
@@ -595,7 +595,7 @@ namespace midLine.Functions
 
             foreach (var doctor in db.Users)
             {
-                if (doctor.Department == department&&doctor.City==city)
+                if (doctor.Department == department&&doctor.City==city && doctor.isActive==true)
                 {
                     /* div1 code */
                     div1 = new HtmlGenericControl("div");

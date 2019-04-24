@@ -36,10 +36,10 @@ namespace midLine.Pages
             {
                 currentUser.Password = Password.Text;
             }
-            string extension = Path.GetExtension(imgUploader.PostedFile.FileName);        
-            
-                if (imgUploader.PostedFile != null && (extension.ToLower() == ".jpg"|| extension.ToLower() == ".png"|| extension.ToLower() == ".gif"))
-                {
+            string extension = Path.GetExtension(imgUploader.PostedFile.FileName);
+
+            if (imgUploader.PostedFile != null && (extension.ToLower() == ".jpg" || extension.ToLower() == ".png" || extension.ToLower() == ".gif"))
+            {
 
                 byte[] bytes;
                 using (BinaryReader br = new BinaryReader(imgUploader.PostedFile.InputStream))
@@ -47,13 +47,17 @@ namespace midLine.Pages
                     bytes = br.ReadBytes(imgUploader.PostedFile.ContentLength);
                 }
                 currentUser.ProfilePhoto = bytes;
-                db.SaveChanges();
-                Response.Redirect("homePage.aspx");
             }
             else
             {
                 fileError.Attributes.Remove("hidden");
             }
+            if (extension.ToLower() == ".jpg" || extension.ToLower() == ".png" || extension.ToLower() == ".gif")
+            {
+                db.SaveChanges();
+                Response.Redirect("homePage.aspx");
+            }
+           
            
         }
     

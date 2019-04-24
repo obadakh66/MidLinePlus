@@ -27,6 +27,7 @@ namespace midLine
             else
             {
                 login.Attributes.Remove("hidden");
+                signup.Attributes.Remove("hidden");
             }
         }
     }
