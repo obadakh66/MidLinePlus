@@ -9,6 +9,9 @@
           <div runat="server" id="fileError" class="alert alert-danger " role="alert" hidden="hidden">
              خطأ في صيغة الملف , الملفات المقبولة : (png ,jpg,gif) فقط 
              </div>
+
+
+
                       <asp:FileUpload ID="imgUploader" runat="server" class="float rigth"/>
       
                   

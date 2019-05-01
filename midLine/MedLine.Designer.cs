@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Admin\Source\Repos\MidLinePlus2\midLine\medLine.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Admin\source\repos\MidLinePlus2\midLine\medLine.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

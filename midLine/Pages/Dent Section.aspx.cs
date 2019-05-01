@@ -14,5 +14,11 @@ namespace midLine.Pages
             Functions.Functions heartdoctors = new Functions.Functions();
             heartdoctors.RetriveDoctors(DentDoctors,"قسم الأسنان");
         }
+
+        protected void search_Click(object sender, EventArgs e)
+        {
+            Functions.Functions heartdoctors = new Functions.Functions();
+            heartdoctors.RetriveDoctorsFilter(DentDoctors, "قسم الأسنان", city.SelectedItem.Text);
+        }
     }
 }

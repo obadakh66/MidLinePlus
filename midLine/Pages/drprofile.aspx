@@ -14,7 +14,7 @@
               <div class="col col-sm-2 mr-0" >
           <div class="list-group" >
             <a href="homepage.aspx" class="list-group-item active">شخصي</a>
-            <a href="#" class="list-group-item">المواعيد</a>
+            <a href="patientAppointments.aspx" class="list-group-item">المواعيد</a>
             <a href="edit profile.aspx" class="list-group-item">تعديل الملف الشخصي</a>
              
               <a href="homepage.aspx" class="list-group-item active">الاقسام</a>
@@ -32,12 +32,15 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <asp:Image ID="image" runat="server" />
+                            <asp:Image ID="image" runat="server" class="w-50 h-50" />
                         </div>
                     </div>
                     <div class="col-md-6">
                        <div runat="server" id="failedAlert" class="alert alert-danger w-75" role="alert" hidden="hidden">
                             لا يمكنك تقييم نفس الشخص اكثر من مرة
+                       </div>
+                        <div runat="server" id="Div1" class="alert alert-success w-75" role="alert" hidden="hidden">
+                           تم التقييم  بنجاح
                        </div>
                         <div class="profile-head">
                                     <h5 id="doctorName" runat="server">

@@ -9,11 +9,14 @@
          <div runat="server" id="fileError" class="alert alert-danger " role="alert" hidden="hidden">
              خطأ في صيغة الملف , الملفات المقبولة : (png ,jpg,gif) فقط 
              </div>
-    <asp:FileUpload ID="imgUploader"  runat="server" class="float rigth" />
+    
       
-                  
+                  <br />
                           
-
+        <div class="card bg-light card-body mx-auto w-75">
+            <div class="form-group">
+                 <asp:FileUpload ID="imgUploader"  runat="server" class="float rigth" />
+            </div>
             
                            <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">الاسم الكامل</label>
@@ -23,26 +26,26 @@
                               <label for="exampleInputEmail1" class="float-right">رقم الهاتف</label>
                               <Asp:TextBox runat="server" ID="MobileNumber"  class="form-control" />
                            </div>
+           
                         <div class="form-group">
                               <label for="exampleInputEmail1" class="float-right">ادخل كلمة المرور الجديدة</label>
                               <Asp:TextBox runat="server" ID="Password" type="password"  class="form-control" aria-describedby="emailHelp" placeholder="ادخل الرمز السري"/>
-                           </div>
-                       
-        <asp:Button ID="save" runat="server" Text="حفظ" class="btn btn-primary tx-tfm" OnClick="save_Click" />
+                         
+                            </div>
+                       <br />
+            <br />
+        <asp:Button ID="save" runat="server" Text="حفظ" CssClass="btn btn-primary w-25 m-auto " OnClick="save_Click" />
         
-
+            </div>
             </form>            
      
-        
+   
+   
       
     <div>
-        <br />
-        <br />
-        <br />
-        <br />
-      <hr>
-
-      <footer class="text-center">
+     
+         <footer class="text-center fixed-bottom">
+           <hr>
         <p>&copy; 2019 mid line plus, Inc.</p>
       </footer>
 

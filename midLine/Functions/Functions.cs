@@ -587,8 +587,9 @@ namespace midLine.Functions
         }
         public void RetriveDoctorsFilter(HtmlGenericControl control, string department,string city)
         {
-            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h5, h52, h53, h54, img_div1, hr, status;
+            System.Web.UI.HtmlControls.HtmlGenericControl div1, div2, div3, div4, h52, h53, h54, img_div1, hr, status;
             Button request;
+            LinkButton link;
             control.Controls.Clear();
             
             midLineDBEntities db = new midLineDBEntities();
@@ -622,10 +623,11 @@ namespace midLine.Functions
                     img_div1.Attributes["width"] = "40";
                     img_div1.Attributes["height"] = "40";
                     /*---------------------------------*/
-                    /* h5 code */
-                    h5 = new HtmlGenericControl("h5");
-                    h5.Attributes["class"] = "card-title";
-                    h5.InnerText = doctor.FullName;
+                    /* link code */
+                    link = new LinkButton();
+                    link.Text = "الدكتور " + doctor.FullName;
+                    link.ID = doctor.Username;
+                    link.Click += delegate (object sender, EventArgs e) { LinkedProfileDr_Click(sender, e); };
                     /*---------------------------------*/
                     /* h52 code */
                     h52 = new HtmlGenericControl("p");
@@ -671,7 +673,7 @@ namespace midLine.Functions
 
 
                     div2.Controls.Add(img_div1);
-                    div2.Controls.Add(h5);
+                    div2.Controls.Add(link);
                     div1.Controls.Add(div2);
                     div1.Controls.Add(hr);
                     div1.Controls.Add(h52);

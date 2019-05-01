@@ -56,8 +56,11 @@ namespace midLine.Pages
             {
                 db.Posts.Add(newPost);
                 db.SaveChanges();
+                HttpContext.Current.Response.Write("<script>alert('تم نشر المنشور بنجاح ');</script>");
+                Response.Redirect("PostPage.aspx");
             }
-            Response.Redirect("PostPage.aspx");
+           
+            
         }
 
         protected void comment_Click(object sender, EventArgs e)

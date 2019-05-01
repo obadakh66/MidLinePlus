@@ -46,7 +46,7 @@
                            <asp:ListItem>العقبة</asp:ListItem>
                   </asp:DropDownList>
 
-                  <asp:Button ID="search" runat="server" Text="بحث" class=" btn btn-primary tx-tfm" />
+                  <asp:Button ID="search" runat="server" Text="بحث" class=" btn btn-primary tx-tfm" OnClick="search_Click" />
             
 
               </div>

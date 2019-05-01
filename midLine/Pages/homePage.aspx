@@ -30,7 +30,7 @@
           <div class="row container p-1">
               <a href="orthopedic section.aspx" class="mr-5">
            <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
+             <img class="card-img-top" style=" width="200"; height="200";" src="../1.png" alt="Card image cap">
              <div class="card-body">
 
              <h5 class="card-title text-center">قسم العظام</h5>
@@ -40,7 +40,7 @@
         </a>
               <a href="heart section.aspx">
            <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
+             <img class="rounded" style=" width="200"; height="200";" src="../4.jpg"  alt="Card image cap">
              <div class="card-body">
 
              <h5 class="card-title text-center">قسم القلب</h5>
@@ -50,7 +50,7 @@
         </a>
               <a href="dent section.aspx">
            <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
+             <img class="img-thumbnail"  style=" width="200"; height="200";"   src="../9.jpg"  alt="Card image cap">
              <div class="card-body">
 
              <h5 class="card-title text-center">قسم الأسنان</h5>
@@ -58,9 +58,9 @@
            </div>
         </div>
         </a>
-              <a href="pediatrice section.aspx" class="mr-5">
+              <a href="Pediatrics section.aspx" class="mr-5">
            <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
+             <img class="img-thumbnail" style=" width="200"; height="200";" src="../baby.jpg" alt="Card image cap">
              <div class="card-body">
 
              <h5 class="card-title text-center">قسم الاطفال</h5>
@@ -70,7 +70,7 @@
         </a>
               <a href="other section.aspx"  >
            <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
+             <img class="img-thumbnail" style=" width="200"; height="200";" src="../1.png" alt="Card image cap">
              <div class="card-body">
 
              <h5 class="card-title text-center">اقسام اخرى</h5>
@@ -81,7 +81,7 @@
               
               <a href="nursing section.aspx"  >
            <div class="card m-3" style="width: 18rem;">
-             <img class="card-img-top" src="../1.png" alt="Card image cap">
+             <img class="img-thumbnail" style=" width="200"; height="200";" src="../5.jpg"  alt="Card image cap">
              <div class="card-body">
 
              <h5 class="card-title text-center">قسم التمريض المنزلي</h5>
@@ -95,7 +95,8 @@
                                      
 
       </div>
-    
+    <br />
+        <br />
       <hr>
 
       <footer class="text-center">

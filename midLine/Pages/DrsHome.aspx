@@ -20,7 +20,7 @@
         </div><!--/.sidebar-offcanvas-->
           <div class="col container">
               <div runat="server" id="successAlert" class="alert alert-success w-75" role="alert" hidden="hidden">
-                 تم اكمال معلوماتك بنجاح يمكنك الآن استقبال مواعيد !
+                 تم ارسال معلوماتك بنجاح ,سيتم تاكيد الحساب من قبل مدير الموقع خلال 12 ساعه !
              </div>
             
           <div class="row container p-3 align-content-center" runat="server" id="updateForm">

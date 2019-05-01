@@ -75,6 +75,7 @@ namespace midLine.Pages
                 };
                 db.Ratings.Add(newRate);
                 db.SaveChanges();
+                Div1.Attributes.Remove("hidden");
             }
 
         
